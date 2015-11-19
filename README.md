@@ -8,4 +8,5 @@ http://www.gopl.io/
 
 # GitBook 教程
 
-https://www.gitbook.com/book/cnmanual/gitbook-documentation-cn
+- https://www.gitbook.com/book/cnmanual/gitbook-documentation-cn
+- https://www.gitbook.com/book/wastemobile/gitbook-chinese
