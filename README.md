@@ -1,12 +1,8 @@
-# 关于 Go 语言
+# 中文预览
 
-Go语言是谷歌推出的一种全新的编程语言.
+http://golang-china.github.com/gopl-zh
 
 # 英文原版
 
 http://www.gopl.io/
 
-# GitBook 教程
-
-- https://www.gitbook.com/book/cnmanual/gitbook-documentation-cn
-- https://www.gitbook.com/book/wastemobile/gitbook-chinese
