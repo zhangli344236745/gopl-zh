@@ -1,6 +1,12 @@
 # Summary
 
-* [简介](ch1/ch1.md)
+* [序言](readme-book.md)
+  * [G语言起源](ch0/ch0-01.md)
+  * [Go语言项目](ch0/ch0-02.md)
+  * [本书的组织](ch0/ch0-03.md)
+  * [更多的信息](ch0/ch0-04.md)
+  * [致谢](ch0/ch0-05.md)
+* [入门](ch1/ch1.md)
   * [Hello, World](ch1/ch1-01.md)
   * [命令行参数](ch1/ch1-02.md)
   * [查找重复的行](ch1/ch1-03.md)
