@@ -16,4 +16,4 @@ _book
 *.pdf
 
 # Golang file
-gopl.io
+vendor
