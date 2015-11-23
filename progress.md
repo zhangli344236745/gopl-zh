@@ -2,11 +2,11 @@
 
 - [x] Preface
 - [ ] Chapter 1: Tutorial
- - [x] 1.1 Hello, World 1
+ - [x] 1.1 Hello, World
  - [x] 1.2 Command-Line Arguments
  - [ ] 1.3 Finding Duplicate Lines
- - [ ] 1.4 Animated GIFs 13
- - [x] 1.5 Fetching a URL 15
+ - [ ] 1.4 Animated GIFs
+ - [x] 1.5 Fetching a URL
  - [x] 1.6 Fetching URLs Concurrently
  - [ ] 1.7 A Web Server
  - [ ] 1.8 Loose Ends
