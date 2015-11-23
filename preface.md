@@ -1,3 +1,15 @@
+# 关于中文版
+
+作为正版纸 [《The Go Programming Language》](http://gopl.io/) 图像的购买者, 这是我们的一个中文版 **读书笔记**, 希望大家不要想歪了.
+
+- 此中文版 **读书笔记** 的源文件: https://github.com/golang-china/gopl-zh
+- 此中文版 **读书笔记** 在线预览: http://golang-china.github.io/gopl-zh/
+- 原版官网: http://gopl.io/
+
+[![](cover_small.jpg)](https://github.com/golang-china/gopl-zh)
+
+欢迎大家提供建议!
+
 # 前言
 
 *“Go是一个开源的编程语言，它很容易构建简单、可靠和高效的软件。”（摘自Go语言官网：http://golang.org）*
