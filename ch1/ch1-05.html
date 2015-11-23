@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="1.5" data-chapter-title="获取URL" data-filepath="ch1/ch1-05.md" data-basepath=".." data-revision="Mon Nov 23 2015 09:58:46 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="1.5" data-chapter-title="获取URL" data-filepath="ch1/ch1-05.md" data-basepath=".." data-revision="Mon Nov 23 2015 15:26:09 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -70,7 +70,7 @@
                 
                         <i class="fa fa-check"></i>
                         
-                        序言
+                        前言
                     </a>
             
             
@@ -338,7 +338,7 @@
                         
                             <b>2.2.</b>
                         
-                        变量
+                        声明
                     </a>
             
             
@@ -353,7 +353,7 @@
                         
                             <b>2.3.</b>
                         
-                        赋值
+                        变量
                     </a>
             
             
@@ -368,7 +368,7 @@
                         
                             <b>2.4.</b>
                         
-                        类型
+                        赋值
                     </a>
             
             
@@ -383,7 +383,7 @@
                         
                             <b>2.5.</b>
                         
-                        包和文件
+                        类型
                     </a>
             
             
@@ -397,6 +397,21 @@
                         <i class="fa fa-check"></i>
                         
                             <b>2.6.</b>
+                        
+                        包和文件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="ch2/ch2-07.html">
+            
+                
+                    <a href="../ch2/ch2-07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
                         
                         作用域
                     </a>
@@ -2008,7 +2023,8 @@
                 
                     <section class="normal" id="section-">
                     
-                        <p>&#x5BF9;&#x4E8E;&#x5F88;&#x591A;&#x5E94;&#x7528;&#x6765;&#x8BF4;&#xFF0C;&#x8BBF;&#x95EE;&#x4E92;&#x8054;&#x7F51;&#x4E0A;&#x7684;&#x4FE1;&#x606F;&#x548C;&#x8BBF;&#x95EE;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E00;&#x6837;&#x91CD;&#x8981;&#x3002;Go&#x5728;net&#x8FD9;&#x4E2A;&#x5927;package&#x4E0B;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x7684;package&#x6765;&#x505A;&#x8FD9;&#x4EF6;&#x4E8B;&#x60C5;&#xFF0C;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x5305;&#x53EF;&#x4EE5;&#x66F4;&#x7B80;&#x5355;&#x5730;&#x7528;&#x7F51;&#x7EDC;&#x6536;&#x53D1;&#x4FE1;&#x606F;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x5EFA;&#x7ACB;&#x66F4;&#x5E95;&#x5C42;&#x7684;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#xFF0C;&#x7F16;&#x5199;&#x670D;&#x52A1;&#x5668;&#x7A0B;&#x5E8F;&#x3002;&#x5728;&#x8FD9;&#x4E9B;&#x60C5;&#x666F;&#x4E0B;&#xFF0C;Go&#x539F;&#x751F;&#x7684;&#x5E76;&#x53D1;&#x7279;&#x6027;(&#x5728;&#x7B2C;&#x516B;&#x7AE0;&#x4E2D;&#x4F1A;&#x4ECB;&#x7ECD;)&#x5C31;&#x663E;&#x5F97;&#x5C24;&#x5176;&#x597D;&#x7528;&#x4E86;&#x3002;</p>
+                        <h2 id="15-&#x83B7;&#x53D6;url">1.5 &#x83B7;&#x53D6;URL</h2>
+<p>&#x5BF9;&#x4E8E;&#x5F88;&#x591A;&#x5E94;&#x7528;&#x6765;&#x8BF4;&#xFF0C;&#x8BBF;&#x95EE;&#x4E92;&#x8054;&#x7F51;&#x4E0A;&#x7684;&#x4FE1;&#x606F;&#x548C;&#x8BBF;&#x95EE;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E00;&#x6837;&#x91CD;&#x8981;&#x3002;Go&#x5728;net&#x8FD9;&#x4E2A;&#x5927;package&#x4E0B;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x7684;package&#x6765;&#x505A;&#x8FD9;&#x4EF6;&#x4E8B;&#x60C5;&#xFF0C;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x5305;&#x53EF;&#x4EE5;&#x66F4;&#x7B80;&#x5355;&#x5730;&#x7528;&#x7F51;&#x7EDC;&#x6536;&#x53D1;&#x4FE1;&#x606F;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x5EFA;&#x7ACB;&#x66F4;&#x5E95;&#x5C42;&#x7684;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#xFF0C;&#x7F16;&#x5199;&#x670D;&#x52A1;&#x5668;&#x7A0B;&#x5E8F;&#x3002;&#x5728;&#x8FD9;&#x4E9B;&#x60C5;&#x666F;&#x4E0B;&#xFF0C;Go&#x539F;&#x751F;&#x7684;&#x5E76;&#x53D1;&#x7279;&#x6027;(&#x5728;&#x7B2C;&#x516B;&#x7AE0;&#x4E2D;&#x4F1A;&#x4ECB;&#x7ECD;)&#x5C31;&#x663E;&#x5F97;&#x5C24;&#x5176;&#x597D;&#x7528;&#x4E86;&#x3002;</p>
 <p>&#x4E3A;&#x4E86;&#x6700;&#x7B80;&#x5355;&#x5730;&#x5C55;&#x793A;&#x57FA;&#x4E8E;HTTP&#x83B7;&#x53D6;&#x4FE1;&#x606F;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x4E0B;&#x9762;&#x7ED9;&#x51FA;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;&#x7A0B;&#x5E8F;fetch&#xFF0C;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x5C06;&#x83B7;&#x53D6;&#x5BF9;&#x5E94;&#x7684;url&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x6E90;&#x6587;&#x672C;&#x6253;&#x5370;&#x51FA;&#x6765;&#xFF1B;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x7684;&#x7075;&#x611F;&#x6765;&#x6E90;&#x4E8E;curl&#x5DE5;&#x5177;(&#x8BD1;&#x6CE8;&#xFF1A;unix&#x4E0B;&#x7684;&#x4E00;&#x4E2A;&#x5DE5;&#x5177;)&#x3002;&#x5F53;&#x7136;&#x4E86;&#xFF0C;curl&#x63D0;&#x4F9B;&#x7684;&#x529F;&#x80FD;&#x66F4;&#x4E3A;&#x590D;&#x6742;&#x4E30;&#x5BCC;&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x53EA;&#x7F16;&#x5199;&#x6700;&#x7B80;&#x5355;&#x7684;&#x6837;&#x4F8B;&#x3002;&#x4E4B;&#x540E;&#x6211;&#x4EEC;&#x8FD8;&#x4F1A;&#x5728;&#x672C;&#x4E66;&#x4E2D;&#x7ECF;&#x5E38;&#x7528;&#x5230;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x3002;</p>
 <pre><code class="lang-go">gopl.io/ch1/fetch
 <span class="hljs-comment">// Fetch prints the content found at a URL.</span>
