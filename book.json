@@ -3,6 +3,6 @@
 	"description": "<The Go Programming Language>中文版",
 	"language": "zh",
 	"structure": {
-		"readme": "readme-book.md"
+		"readme": "preface.md"
 	}
 }
