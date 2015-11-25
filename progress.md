@@ -112,7 +112,7 @@
  - [ ] 12.8 Displaying the Methods of a Type
  - [ ] 12.9 A Word of Caution
 - [x] Chapter 13: Low-Level Programming
- - [ ] 13.1 unsafe.Sizeof, Alignof, and Offsetof
+ - [x] 13.1 unsafe.Sizeof, Alignof, and Offsetof
  - [ ] 13.2 unsafe.Pointer
  - [ ] 13.3 Example: Deep Equivalence
  - [ ] 13.4 Calling C Code with cgo
