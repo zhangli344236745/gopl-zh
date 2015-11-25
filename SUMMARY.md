@@ -1,7 +1,7 @@
 # Summary
 
 * [前言](preface.md)
-  * [G语言起源](ch0/ch0-01.md)
+  * [Go语言起源](ch0/ch0-01.md)
   * [Go语言项目](ch0/ch0-02.md)
   * [本书的组织](ch0/ch0-03.md)
   * [更多的信息](ch0/ch0-04.md)
