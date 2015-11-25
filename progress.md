@@ -1,7 +1,7 @@
 # 项目进度
 
 - [x] Preface
-- [ ] Chapter 1: Tutorial
+- [x] Chapter 1: Tutorial
  - [x] 1.1 Hello, World
  - [x] 1.2 Command-Line Arguments
  - [ ] 1.3 Finding Duplicate Lines
@@ -9,7 +9,7 @@
  - [x] 1.5 Fetching a URL
  - [x] 1.6 Fetching URLs Concurrently
  - [ ] 1.7 A Web Server
- - [ ] 1.8 Loose Ends
+ - [x] 1.8 Loose Ends
 - [ ] Chapter 2: Program Structure
  - [ ] 2.1 Names
  - [ ] 2.2 Declarations
@@ -111,7 +111,7 @@
  - [ ] 12.7 Accessing Struct Field Tags
  - [ ] 12.8 Displaying the Methods of a Type
  - [ ] 12.9 A Word of Caution
-- [ ] Chapter 13: Low-Level Programming
+- [x] Chapter 13: Low-Level Programming
  - [ ] 13.1 unsafe.Sizeof, Alignof, and Offsetof
  - [ ] 13.2 unsafe.Pointer
  - [ ] 13.3 Example: Deep Equivalence
