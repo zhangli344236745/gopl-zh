@@ -10,7 +10,7 @@
  - [x] 1.6 Fetching URLs Concurrently
  - [x] 1.7 A Web Server
  - [x] 1.8 Loose Ends
-- [ ] Chapter 2: Program Structure
+- [x] Chapter 2: Program Structure
  - [ ] 2.1 Names
  - [ ] 2.2 Declarations
  - [ ] 2.3 Variables
