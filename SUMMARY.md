@@ -121,6 +121,6 @@
   * [unsafe.Pointer](ch13/ch13-02.md)
   * [示例: 深度相等判断](ch13/ch13-03.md)
   * [通过cgo调用C代码](ch13/ch13-04.md)
-  * [补充几点](ch13/ch13-05.md)
+  * [几点忠告](ch13/ch13-05.md)
 * [勘误](errata.md)
 
