@@ -8,7 +8,7 @@
  - [x] 1.4 Animated GIFs
  - [x] 1.5 Fetching a URL
  - [x] 1.6 Fetching URLs Concurrently
- - [ ] 1.7 A Web Server
+ - [x] 1.7 A Web Server
  - [x] 1.8 Loose Ends
 - [ ] Chapter 2: Program Structure
  - [ ] 2.1 Names
@@ -114,7 +114,7 @@
 - [x] Chapter 13: Low-Level Programming
  - [x] 13.1 unsafe.Sizeof, Alignof, and Offsetof
  - [x] 13.2 unsafe.Pointer
- - [ ] 13.3 Example: Deep Equivalence
+ - [x] 13.3 Example: Deep Equivalence
  - [ ] 13.4 Calling C Code with cgo
  - [ ] 13.5 Another Word of Caution
 - [ ] Errata
