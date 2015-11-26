@@ -114,8 +114,8 @@
 - [x] Chapter 13: Low-Level Programming
  - [x] 13.1 unsafe.Sizeof, Alignof, and Offsetof
  - [x] 13.2 unsafe.Pointer
- - [ ] 13.3 Example: Deep Equivalence
- - [ ] 13.4 Calling C Code with cgo
- - [ ] 13.5 Another Word of Caution
+ - [x] 13.3 Example: Deep Equivalence
+ - [x] 13.4 Calling C Code with cgo
+ - [x] 13.5 Another Word of Caution
 - [ ] Errata
 
