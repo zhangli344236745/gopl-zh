@@ -68,7 +68,7 @@
   * [类型断言](ch7/ch7-10.md)
   * [基于类型断言识别错误类型](ch7/ch7-11.md)
   * [通过类型断言查询接口](ch7/ch7-12.md)
-  * [类似分支](ch7/ch7-13.md)
+  * [类型分支](ch7/ch7-13.md)
   * [示例: 基于标记的XML解码](ch7/ch7-14.md)
   * [补充几点](ch7/ch7-15.md)
 * [Goroutines和Channels](ch8/ch8.md)
