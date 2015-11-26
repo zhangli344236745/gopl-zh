@@ -2,8 +2,9 @@
 
 作为正版 [《The Go Programming Language》](http://gopl.io/) 纸质图书的购买者, 这是我们的一个中文版 **读书笔记**, 希望大家不要想歪了.
 
-- 此中文版 **读书笔记** 的源文件: http://github.com/golang-china/gopl-zh
 - 此中文版 **读书笔记** 在线预览: http://golang-china.github.io/gopl-zh
+- 此中文版 **读书笔记** 的源文件: http://github.com/golang-china/gopl-zh
+- 此中文版 **读书笔记** 项目进度: http://github.com/golang-china/gopl-zh/blob/master/progress.md
 - 原版官网: http://gopl.io
 
 [![](cover_small.jpg)](https://github.com/golang-china/gopl-zh)
