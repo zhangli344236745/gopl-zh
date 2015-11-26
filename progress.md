@@ -8,7 +8,7 @@
  - [x] 1.4 Animated GIFs
  - [x] 1.5 Fetching a URL
  - [x] 1.6 Fetching URLs Concurrently
- - [ ] 1.7 A Web Server
+ - [x] 1.7 A Web Server
  - [x] 1.8 Loose Ends
 - [ ] Chapter 2: Program Structure
  - [ ] 2.1 Names
