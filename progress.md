@@ -12,7 +12,7 @@
  - [x] 1.8 Loose Ends
 - [x] Chapter 2: Program Structure
  - [x] 2.1 Names
- - [ ] 2.2 Declarations
+ - [x] 2.2 Declarations
  - [ ] 2.3 Variables
  - [ ] 2.4 Assignments
  - [ ] 2.5 Type Declarations
