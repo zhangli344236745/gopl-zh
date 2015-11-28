@@ -1,4 +1,8 @@
-# 中文预览
+# Go圣经 《The Go Programming Language》 中文版
+
+![](cover_small.jpg)
+
+## 中文预览
 
 http://golang-china.github.com/gopl-zh
 
@@ -13,6 +17,6 @@ http://golang-china.github.com/gopl-zh
 3. 运行 `go generate github.com/golang-china/gopl-zh`, 生成 `_book` 目录
 4. 打开 `_book/index.html` 文件
 
-# 英文原版
+## 英文原版
 
 http://gopl.io/
