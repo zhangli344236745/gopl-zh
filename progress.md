@@ -13,7 +13,7 @@
 - [x] Chapter 2: Program Structure
  - [x] 2.1 Names
  - [x] 2.2 Declarations
- - [ ] 2.3 Variables
+ - [x] 2.3 Variables
  - [ ] 2.4 Assignments
  - [ ] 2.5 Type Declarations
  - [ ] 2.6 Packages and Files
