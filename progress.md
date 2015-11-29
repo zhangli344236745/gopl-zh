@@ -14,7 +14,7 @@
  - [x] 2.1 Names
  - [x] 2.2 Declarations
  - [x] 2.3 Variables
- - [ ] 2.4 Assignments
+ - [x] 2.4 Assignments
  - [ ] 2.5 Type Declarations
  - [ ] 2.6 Packages and Files
  - [ ] 2.7 Scope
