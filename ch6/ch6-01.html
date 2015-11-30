@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="6.1" data-chapter-title="方法声明" data-filepath="ch6/ch6-01.md" data-basepath=".." data-revision="Thu Nov 26 2015 15:27:48 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="6.1" data-chapter-title="方法声明" data-filepath="ch6/ch6-01.md" data-basepath=".." data-revision="Mon Nov 30 2015 09:57:11 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -1133,7 +1133,7 @@
                         
                             <b>7.13.</b>
                         
-                        类似分支
+                        类型分支
                     </a>
             
             
@@ -2023,7 +2023,68 @@
                 
                     <section class="normal" id="section-">
                     
-                        
+                        <h2 id="61-&#x65B9;&#x6CD5;&#x58F0;&#x660E;">6.1. &#x65B9;&#x6CD5;&#x58F0;&#x660E;</h2>
+<p>&#x5728;&#x51FD;&#x6570;&#x58F0;&#x660E;&#x65F6;&#xFF0C;&#x5728;&#x5176;&#x540D;&#x5B57;&#x4E4B;&#x524D;&#x653E;&#x4E0A;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x5373;&#x662F;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x4E2A;&#x9644;&#x52A0;&#x7684;&#x53C2;&#x6570;&#x4F1A;&#x5C06;&#x8BE5;&#x51FD;&#x6570;&#x9644;&#x52A0;&#x5230;&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x4E0A;&#xFF0C;&#x5373;&#x76F8;&#x5F53;&#x4E8E;&#x4E3A;&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x72EC;&#x5360;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x6765;&#x5199;&#x6211;&#x4EEC;&#x7B2C;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x5728;package geometry&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-go">gopl.io/ch6/geometry
+<span class="hljs-keyword">package</span> geometry
+
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;math&quot;</span>
+
+<span class="hljs-keyword">type</span> Point <span class="hljs-keyword">struct</span>{ X, Y <span class="hljs-typename">float64</span> }
+
+<span class="hljs-comment">// traditional function</span>
+<span class="hljs-keyword">func</span> Distance(p, q Point) <span class="hljs-typename">float64</span> {
+    <span class="hljs-keyword">return</span> math.Hypot(q.X-p.X, q.Y-p.Y)
+}
+
+
+<span class="hljs-comment">// same thing, but as a method of the Point type</span>
+<span class="hljs-keyword">func</span> (p Point) Distance(q Point) <span class="hljs-typename">float64</span> {
+    <span class="hljs-keyword">return</span> math.Hypot(q.X-p.X, q.Y-p.Y)
+}
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x91CC;&#x90A3;&#x4E2A;&#x9644;&#x52A0;&#x7684;&#x53C2;&#x6570;p&#xFF0C;&#x53EB;&#x505A;&#x65B9;&#x6CD5;&#x7684;&#x63A5;&#x6536;&#x8005;(receiver)&#xFF0C;&#x65E9;&#x671F;&#x7684;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BED;&#x8A00;&#x7559;&#x4E0B;&#x7684;&#x9057;&#x4EA7;&#x5C06;&#x8C03;&#x7528;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x79F0;&#x4E3A;&#x201C;&#x5411;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x201D;&#x3002;</p>
+<p>&#x5728;Go&#x8BED;&#x8A00;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5E76;&#x4E0D;&#x4F1A;&#x50CF;&#x5176;&#x5B83;&#x8BED;&#x8A00;&#x90A3;&#x6837;&#x7528;this&#x6216;&#x8005;self&#x4F5C;&#x4E3A;&#x63A5;&#x6536;&#x8005;&#xFF1B;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4EFB;&#x610F;&#x7684;&#x9009;&#x62E9;&#x63A5;&#x6536;&#x8005;&#x7684;&#x540D;&#x5B57;&#x3002;&#x7531;&#x4E8E;&#x63A5;&#x6536;&#x8005;&#x7684;&#x540D;&#x5B57;&#x7ECF;&#x5E38;&#x4F1A;&#x88AB;&#x4F7F;&#x7528;&#x5230;&#xFF0C;&#x6240;&#x4EE5;&#x4FDD;&#x6301;&#x5176;&#x5728;&#x65B9;&#x6CD5;&#x95F4;&#x4F20;&#x9012;&#x65F6;&#x7684;&#x4E00;&#x81F4;&#x6027;&#x548C;&#x7B80;&#x77ED;&#x6027;&#x662F;&#x4E0D;&#x9519;&#x7684;&#x4E3B;&#x610F;&#x3002;&#x8FD9;&#x91CC;&#x7684;&#x5EFA;&#x8BAE;&#x662F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5176;&#x7C7B;&#x578B;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x6BCD;&#xFF0C;&#x6BD4;&#x5982;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x4E86;Point&#x7684;&#x9996;&#x5B57;&#x6BCD;p&#x3002;</p>
+<p>&#x5728;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x63A5;&#x6536;&#x8005;&#x53C2;&#x6570;&#x4E00;&#x822C;&#x4F1A;&#x5728;&#x65B9;&#x6CD5;&#x540D;&#x4E4B;&#x524D;&#x51FA;&#x73B0;&#x3002;&#x8FD9;&#x548C;&#x65B9;&#x6CD5;&#x58F0;&#x660E;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x90FD;&#x662F;&#x63A5;&#x6536;&#x8005;&#x53C2;&#x6570;&#x5728;&#x65B9;&#x6CD5;&#x540D;&#x5B57;&#x4E4B;&#x524D;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>p := Point{1, 2}
+q := Point{4, 6}
+fmt.Println(Distance(p, q)) // &quot;5&quot;, function call
+fmt.Println(p.Distance(q))  // &quot;5&quot;, method call
+</code></pre><p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x4E0A;&#x9762;&#x7684;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x90FD;&#x662F;Distance&#xFF0C;&#x4F46;&#x662F;&#x5374;&#x6CA1;&#x6709;&#x53D1;&#x751F;&#x51B2;&#x7A81;&#x3002;&#x7B2C;&#x4E00;&#x4E2A;Distance&#x7684;&#x8C03;&#x7528;&#x5B9E;&#x9645;&#x4E0A;&#x7528;&#x7684;&#x662F;&#x5305;&#x7EA7;&#x522B;&#x7684;&#x51FD;&#x6570;geometry.Distance&#xFF0C;&#x800C;&#x7B2C;&#x4E8C;&#x4E2A;&#x5219;&#x662F;&#x4F7F;&#x7528;&#x521A;&#x521A;&#x58F0;&#x660E;&#x7684;Point&#xFF0C;&#x8C03;&#x7528;&#x7684;&#x662F;Point&#x7C7B;&#x4E0B;&#x58F0;&#x660E;&#x7684;Point.Distance&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x8FD9;&#x79CD;p.Distance&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x53EB;&#x505A;&#x9009;&#x62E9;&#x5668;&#xFF0C;&#x56E0;&#x4E3A;&#x4ED6;&#x4F1A;&#x9009;&#x62E9;&#x5408;&#x9002;&#x7684;&#x5BF9;&#x5E94;p&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;Distance&#x65B9;&#x6CD5;&#x6765;&#x6267;&#x884C;&#x3002;&#x9009;&#x62E9;&#x5668;&#x4E5F;&#x4F1A;&#x88AB;&#x7528;&#x6765;&#x9009;&#x62E9;&#x4E00;&#x4E2A;struct&#x7C7B;&#x578B;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x6BD4;&#x5982;p.X&#x3002;&#x7531;&#x4E8E;&#x65B9;&#x6CD5;&#x548C;&#x5B57;&#x6BB5;&#x90FD;&#x662F;&#x5728;&#x540C;&#x4E00;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF0C;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x91CC;&#x58F0;&#x660E;&#x4E00;&#x4E2A;X&#x65B9;&#x6CD5;&#x7684;&#x8BDD;&#xFF0C;&#x7F16;&#x8BD1;&#x5668;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x56E0;&#x4E3A;&#x5728;&#x8C03;&#x7528;p.X&#x65F6;&#x4F1A;&#x6709;&#x6B67;&#x4E49;(&#x8BD1;&#x6CE8;&#xFF1A;&#x8FD9;&#x91CC;&#x786E;&#x5B9E;&#x633A;&#x5947;&#x602A;&#x7684;)&#x3002;</p>
+<p>&#x56E0;&#x4E3A;&#x6BCF;&#x79CD;&#x7C7B;&#x578B;&#x90FD;&#x6709;&#x5176;&#x65B9;&#x6CD5;&#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x7528;Distance&#x8FD9;&#x4E2A;&#x540D;&#x5B57;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E0D;&#x540C;&#x7684;Distance&#x8C03;&#x7528;&#x6307;&#x5411;&#x4E86;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x91CC;&#x7684;Distance&#x65B9;&#x6CD5;&#x3002;&#x8BA9;&#x6211;&#x4EEC;&#x6765;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;Path&#x7C7B;&#x578B;&#xFF0C;&#x8FD9;&#x4E2A;Path&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x7EBF;&#x6BB5;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x5E76;&#x4E14;&#x4E5F;&#x7ED9;&#x8FD9;&#x4E2A;Path&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x53EB;Distance&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<pre><code>// A Path is a journey connecting the points with straight lines.
+type Path []Point
+// Distance returns the distance traveled along the path.
+func (path Path) Distance() float64 {
+    sum := 0.0
+    for i := range path {
+        if i &gt; 0 {
+            sum += path[i-1].Distance(path[i])
+        }
+    }
+    return sum
+}
+</code></pre><p>Path&#x662F;&#x4E00;&#x4E2A;&#x547D;&#x540D;&#x7684;slice&#x7C7B;&#x578B;&#xFF0C;&#x800C;&#x4E0D;&#x662F;Point&#x90A3;&#x6837;&#x7684;struct&#x7C7B;&#x578B;&#xFF0C;&#x7136;&#x800C;&#x6211;&#x4EEC;&#x4F9D;&#x7136;&#x53EF;&#x4EE5;&#x4E3A;&#x5B83;&#x5B9A;&#x4E49;&#x65B9;&#x6CD5;&#x3002;&#x5728;&#x80FD;&#x591F;&#x7ED9;&#x4EFB;&#x610F;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#x65B9;&#x6CD5;&#x8FD9;&#x4E00;&#x70B9;&#x4E0A;&#xFF0C;Go&#x548C;&#x5F88;&#x591A;&#x5176;&#x5B83;&#x7684;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x8BED;&#x8A00;&#x4E0D;&#x592A;&#x4E00;&#x6837;&#x3002;&#x56E0;&#x6B64;&#x5728;Go&#x8BED;&#x8A00;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x4E3A;&#x4E00;&#x4E9B;&#x7B80;&#x5355;&#x7684;&#x6570;&#x503C;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x3001;slice&#x3001;map&#x6765;&#x5B9A;&#x4E49;&#x4E00;&#x4E9B;&#x9644;&#x52A0;&#x884C;&#x4E3A;&#x5F88;&#x65B9;&#x4FBF;&#x3002;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x88AB;&#x58F0;&#x660E;&#x5230;&#x4EFB;&#x610F;&#x7C7B;&#x578B;&#xFF0C;&#x53EA;&#x8981;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#x6216;&#x8005;&#x4E00;&#x4E2A;interface&#x3002;</p>
+<p>&#x4E24;&#x4E2A;Distance&#x65B9;&#x6CD5;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x7C7B;&#x578B;&#x3002;&#x4ED6;&#x4EEC;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x4E4B;&#x95F4;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x5173;&#x7CFB;&#xFF0C;&#x5C3D;&#x7BA1;Path&#x7684;Distance&#x65B9;&#x6CD5;&#x4F1A;&#x5728;&#x5185;&#x90E8;&#x8C03;&#x7528;Point.Distance&#x65B9;&#x6CD5;&#x6765;&#x8BA1;&#x7B97;&#x6BCF;&#x4E2A;&#x8FDE;&#x63A5;&#x90BB;&#x63A5;&#x70B9;&#x7684;&#x7EBF;&#x6BB5;&#x7684;&#x957F;&#x5EA6;&#x3002;</p>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x6765;&#x8C03;&#x7528;&#x4E00;&#x4E2A;&#x65B0;&#x65B9;&#x6CD5;&#xFF0C;&#x8BA1;&#x7B97;&#x4E09;&#x89D2;&#x5F62;&#x7684;&#x5468;&#x957F;&#xFF1A;</p>
+<pre><code>perim := Path{
+    {1, 1},
+    {5, 1},
+    {5, 4},
+    {1, 1},
+}
+fmt.Println(perim.Distance()) // &quot;12&quot;
+</code></pre><p>&#x5728;&#x4E0A;&#x9762;&#x4E24;&#x4E2A;&#x5BF9;Distance&#x540D;&#x5B57;&#x7684;&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x4E2D;&#xFF0C;&#x7F16;&#x8BD1;&#x5668;&#x4F1A;&#x6839;&#x636E;&#x65B9;&#x6CD5;&#x7684;&#x540D;&#x5B57;&#x4EE5;&#x53CA;&#x63A5;&#x6536;&#x8005;&#x6765;&#x51B3;&#x5B9A;&#x5177;&#x4F53;&#x8C03;&#x7528;&#x7684;&#x662F;&#x54EA;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x3002;&#x7B2C;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;path[i-1]&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x7C7B;&#x578B;&#x662F;Point&#xFF0C;&#x56E0;&#x6B64;Point.Distance&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x88AB;&#x8C03;&#x7528;&#xFF1B;&#x5728;&#x7B2C;&#x4E8C;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;perim&#x7684;&#x7C7B;&#x578B;&#x662F;Path&#xFF0C;&#x56E0;&#x6B64;Distance&#x8C03;&#x7528;&#x7684;&#x662F;Path.Distance&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x5176;&#x5185;&#x90E8;&#x7684;&#x65B9;&#x6CD5;&#x90FD;&#x5FC5;&#x987B;&#x6709;&#x552F;&#x4E00;&#x7684;&#x65B9;&#x6CD5;&#x540D;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x540C;&#x7684;&#x7C7B;&#x578B;&#x5374;&#x53EF;&#x4EE5;&#x6709;&#x540C;&#x6837;&#x7684;&#x65B9;&#x6CD5;&#x540D;&#xFF0C;&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x8FD9;&#x91CC;Point&#x548C;Path&#x5C31;&#x90FD;&#x6709;Distance&#x8FD9;&#x4E2A;&#x540D;&#x5B57;&#x7684;&#x65B9;&#x6CD5;&#xFF1B;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x6CA1;&#x6709;&#x5FC5;&#x8981;&#x975E;&#x5728;&#x65B9;&#x6CD5;&#x540D;&#x4E4B;&#x524D;&#x52A0;&#x7C7B;&#x578B;&#x540D;&#x6765;&#x6D88;&#x9664;&#x6B67;&#x4E49;&#xFF0C;&#x6BD4;&#x5982;PathDistance&#x3002;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x770B;&#x5230;&#x4E86;&#x65B9;&#x6CD5;&#x6BD4;&#x4E4B;&#x51FD;&#x6570;&#x7684;&#x4E00;&#x4E9B;&#x597D;&#x5904;&#xFF1A;&#x65B9;&#x6CD5;&#x540D;&#x53EF;&#x4EE5;&#x7B80;&#x77ED;&#x3002;&#x5F53;&#x6211;&#x4EEC;&#x5728;&#x5305;&#x5916;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#x8FD9;&#x79CD;&#x597D;&#x5904;&#x5C31;&#x4F1A;&#x88AB;&#x653E;&#x5927;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x77ED;&#x540D;&#x5B57;&#xFF0C;&#x800C;&#x53EF;&#x4EE5;&#x7701;&#x7565;&#x6389;&#x5305;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>import &quot;gopl.io/ch6/geometry&quot;
+
+perim := geometry.Path{{1, 1}, {5, 1}, {5, 4}, {1, 1}}
+fmt.Println(geometry.PathDistance(perim)) // &quot;12&quot;, standalone function
+fmt.Println(perim.Distance())             // &quot;12&quot;, method of geometry.Path
+</code></pre><p>&#x8BD1;&#x6CE8;&#xFF1A;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x8981;&#x7528;&#x65B9;&#x6CD5;&#x53BB;&#x8BA1;&#x7B97;perim&#x7684;distance&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x53BB;&#x5199;&#x5168;geometry&#x7684;&#x5305;&#x540D;&#xFF0C;&#x548C;&#x5176;&#x51FD;&#x6570;&#x540D;&#xFF0C;&#x4F46;&#x662F;&#x56E0;&#x4E3A;Path&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528;&#x7684;Distance&#x65B9;&#x6CD5;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5199;perim.Distance()&#x3002;&#x76F8;&#x5F53;&#x4E8E;&#x53EF;&#x4EE5;&#x5C11;&#x6253;&#x5F88;&#x591A;&#x5B57;&#xFF0C;&#x4F5C;&#x8005;&#x5E94;&#x8BE5;&#x662F;&#x8FD9;&#x4E2A;&#x610F;&#x601D;&#x3002;&#x56E0;&#x4E3A;&#x5728;Go&#x91CC;&#x5305;&#x5916;&#x8C03;&#x7528;&#x51FD;&#x6570;&#x9700;&#x8981;&#x5E26;&#x4E0A;&#x5305;&#x540D;&#xFF0C;&#x8FD8;&#x662F;&#x633A;&#x9EBB;&#x70E6;&#x7684;&#x3002;</p>
+
                     
                     </section>
                 

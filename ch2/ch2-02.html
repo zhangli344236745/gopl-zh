@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="2.2" data-chapter-title="声明" data-filepath="ch2/ch2-02.md" data-basepath=".." data-revision="Thu Nov 26 2015 15:27:48 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="2.2" data-chapter-title="声明" data-filepath="ch2/ch2-02.md" data-basepath=".." data-revision="Mon Nov 30 2015 09:57:11 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -1133,7 +1133,7 @@
                         
                             <b>7.13.</b>
                         
-                        类似分支
+                        类型分支
                     </a>
             
             
@@ -2024,7 +2024,44 @@
                     <section class="normal" id="section-">
                     
                         <h2 id="22-&#x58F0;&#x660E;">2.2. &#x58F0;&#x660E;</h2>
-<p>TODO</p>
+<p>&#x58F0;&#x660E;&#x5B9A;&#x4E49;&#x4E86;&#x7A0B;&#x5E8F;&#x7684;&#x5165;&#x53E3;&#x4EE5;&#x53CA;&#x90E8;&#x5206;&#x6216;&#x5168;&#x90E8;&#x7684;&#x5C5E;&#x6027;. Go&#x4E3B;&#x8981;&#x6709;&#x56DB;&#x79CD;&#x58F0;&#x660E;&#x7C7B;&#x578B;:  var, const, type, &#x548C; func, &#x5206;&#x522B;&#x5BF9;&#x5E94; &#x53D8;&#x91CF;, &#x5E38;&#x91CF;, &#x7C7B;&#x578B;, &#x548C; &#x51FD;&#x6570;&#x7684; &#x58F0;&#x660E;. &#x8FD9;&#x4E00;&#x7AE0;&#x6211;&#x4EEC;&#x91CD;&#x70B9;&#x8BA8;&#x8BBA;&#x53D8;&#x91CF;&#x548C;&#x7C7B;&#x578B;&#x7684;&#x58F0;&#x660E;, &#x7B2C;&#x4E09;&#x7AE0;&#x5C06;&#x8BA8;&#x8BBA;&#x5E38;&#x91CF;&#x7684;&#x58F0;&#x660E;, &#x7B2C;&#x4E94;&#x7AE0;&#x5C06;&#x8BA8;&#x8BBA;&#x51FD;&#x6570;&#x7684;&#x58F0;&#x660E;.</p>
+<p>&#x4E00;&#x4E2A;Go&#x7A0B;&#x5E8F;&#x5B58;&#x50A8;&#x5728;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x4EE5;<code>.go</code>&#x4E3A;&#x540E;&#x7F00;&#x540D;&#x7684;&#x6587;&#x4EF6;&#x4E2D;. &#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x4EE5;&#x4E2A;&#x5305;&#x7684;&#x58F0;&#x660E;&#x5F00;&#x59CB;, &#x4EE5;&#x8BF4;&#x660E;&#x6587;&#x4EF6;&#x662F;&#x5C5E;&#x4E8E;&#x5305;&#x7684;&#x4EE5;&#x90E8;&#x5206;.
+&#x5305;&#x58F0;&#x660E;&#x4E4B;&#x540E;&#x662F; import &#x5BFC;&#x5165;&#x58F0;&#x660E;, &#x7136;&#x540E;&#x662F;&#x5305;&#x4E00;&#x7EA7;&#x7684;&#x7C7B;&#x578B;/&#x53D8;&#x91CF;/&#x5E38;&#x91CF;/&#x51FD;&#x6570;&#x7684;&#x58F0;&#x660E;, &#x58F0;&#x660E;&#x7684;&#x987A;&#x5E8F;&#x65E0;&#x5173;&#x7D27;&#x8981;. &#x4F8B;&#x5982;, &#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x58F0;&#x660E;&#x4E86;&#x4E00;&#x4E2A;&#x5E38;&#x91CF;, &#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x548C;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;:</p>
+<pre><code class="lang-Go">gopl.io/ch2/boiling
+<span class="hljs-comment">// Boiling prints the boiling point of water.</span>
+<span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span>
+
+<span class="hljs-keyword">const</span> boilingF = <span class="hljs-number">212.0</span>
+
+<span class="hljs-keyword">func</span> main() {
+    <span class="hljs-keyword">var</span> f = boilingF
+    <span class="hljs-keyword">var</span> c = (f - <span class="hljs-number">32</span>) * <span class="hljs-number">5</span> / <span class="hljs-number">9</span>
+    fmt.Printf(<span class="hljs-string">&quot;boiling point = %g&#xB0;F or %g&#xB0;C\n&quot;</span>, f, c)
+    <span class="hljs-comment">// Output:</span>
+    <span class="hljs-comment">// boiling point = 212&#xB0;F or 100&#xB0;C</span>
+}
+</code></pre>
+<p>&#x5176;&#x4E2D; &#x5E38;&#x91CF; <code>boilingF</code> &#x662F;&#x5728;&#x5305;&#x4E00;&#x7EA7;&#x58F0;&#x660E;&#x7684;, &#x7136;&#x540E; <code>f</code> &#x548C; <code>c</code> &#x662F;&#x5728; main &#x51FD;&#x6570;&#x5185;&#x90E8;&#x58F0;&#x660E;&#x7684;. &#x5728;&#x5305;&#x4E00;&#x7EA7;&#x58F0;&#x660E;&#x7684;&#x540D;&#x5B57;&#x53EF;&#x5728;&#x6574;&#x4E2A;&#x5305;&#x8BBF;&#x95EE;, &#x800C;&#x4E0D;&#x4EC5;&#x4EC5;&#x5728;&#x5176;&#x58F0;&#x660E;&#x7684;&#x6587;&#x4EF6;&#x4E2D;&#x8BBF;&#x95EE;. &#x76F8;&#x6BD4;&#x4E4B;&#x4E0B;, &#x5C40;&#x90E8;&#x58F0;&#x660E;&#x7684;&#x540D;&#x5B57;&#x5C31;&#x53EA;&#x80FD;&#x5728;&#x51FD;&#x6570;&#x5185;&#x90E8;&#x5F88;&#x5C0F;&#x7684;&#x90E8;&#x5206;&#x53EF;&#x8BBF;&#x95EE;.</p>
+<p>&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x58F0;&#x660E;&#x6709;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x540D;&#x5B57;, &#x53C2;&#x6570;&#x5217;&#x8868;(&#x7531;&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#x8005;&#x63D0;&#x4F9B;&#x53C2;&#x6570;&#x53D8;&#x91CF;&#x7684;&#x5177;&#x4F53;&#x503C;), &#x4E00;&#x4E2A;&#x53EF;&#x9009;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x5217;&#x8868;, &#x548C;&#x5305;&#x542B;&#x51FD;&#x6570;&#x8BED;&#x53E5;&#x5B9A;&#x4E49;&#x7684;&#x51FD;&#x6570;&#x4F53;. &#x5982;&#x679C;&#x51FD;&#x6570;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;, &#x90A3;&#x4E48;&#x8FD4;&#x56DE;&#x503C;&#x5217;&#x8868;&#x662F;&#x7701;&#x7565;&#x7684;. &#x6267;&#x884C;&#x51FD;&#x6570;&#x4ECE;&#x51FD;&#x6570;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x8BED;&#x53E5;&#x5F00;&#x59CB;, &#x4F46;&#x662F;&#x987A;&#x5E8F;&#x6267;&#x884C;&#x77E5;&#x9053;&#x9047;&#x5230; renturn &#x8FD4;&#x56DE;&#x8BED;&#x8A00;, &#x5982;&#x679C;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x8BED;&#x53E5;&#x5219;&#x662F;&#x5230;&#x51FD;&#x6570;&#x672B;&#x5C3E;, &#x7136;&#x540E;&#x8FD4;&#x56DE;&#x5230;&#x8C03;&#x7528;&#x8005;.</p>
+<p>&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x770B;&#x5230;&#x8FC7;&#x5F88;&#x591A;&#x51FD;&#x6570;&#x7684;&#x4F8B;&#x5B50;&#x4E86;, &#x5728;&#x7B2C;&#x4E94;&#x7AE0;&#x5C06;&#x6DF1;&#x5165;&#x8BA8;&#x8BBA;&#x51FD;&#x6570;&#x7684;&#x7EC6;&#x8282;, &#x8FD9;&#x91CC;&#x53EA;&#x7C97;&#x7565;&#x8BF4;&#x4E0B;. &#x4E0B;&#x9762;&#x7684; <code>fToC</code> &#x51FD;&#x6570;&#x5C01;&#x88C5;&#x4E86;&#x6E29;&#x5EA6;&#x8F6C;&#x6362;&#x7684;&#x903B;&#x8F91;, &#x8FD9;&#x6837;&#x5B83;&#x53EA;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x4E00;&#x6B21;, &#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x591A;&#x4E2A;&#x5730;&#x65B9;&#x591A;&#x6B21;&#x4F7F;&#x7528;. &#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;, main &#x51FD;&#x6570;&#x5C31;&#x8C03;&#x7528;&#x4E86;&#x4E24;&#x6B21; <code>fToC</code> &#x51FD;&#x6570;, &#x5206;&#x522B;&#x662F;&#x4F7F;&#x7528;&#x5C40;&#x90E8;&#x5B9A;&#x4E49;&#x7684;&#x4E24;&#x4E2A;&#x5E38;&#x91CF;&#x4F5C;&#x4E3A;&#x51FD;&#x6570;&#x53C2;&#x6570;.</p>
+<pre><code class="lang-Go">gopl.io/ch2/ftoc
+<span class="hljs-comment">// Ftoc prints two Fahrenheit-to-Celsius conversions.</span>
+<span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span>
+
+<span class="hljs-keyword">func</span> main() {
+    <span class="hljs-keyword">const</span> freezingF, boilingF = <span class="hljs-number">32.0</span>, <span class="hljs-number">212.0</span>
+    fmt.Printf(<span class="hljs-string">&quot;%g&#xB0;F = %g&#xB0;C\n&quot;</span>, freezingF, fToC(freezingF)) <span class="hljs-comment">// &quot;32&#xB0;F = 0&#xB0;C&quot;</span>
+    fmt.Printf(<span class="hljs-string">&quot;%g&#xB0;F = %g&#xB0;C\n&quot;</span>, boilingF, fToC(boilingF))   <span class="hljs-comment">// &quot;212&#xB0;F = 100&#xB0;C&quot;</span>
+}
+
+<span class="hljs-keyword">func</span> fToC(f <span class="hljs-typename">float64</span>) <span class="hljs-typename">float64</span> {
+    <span class="hljs-keyword">return</span> (f - <span class="hljs-number">32</span>) * <span class="hljs-number">5</span> / <span class="hljs-number">9</span>
+}
+</code></pre>
 
                     
                     </section>

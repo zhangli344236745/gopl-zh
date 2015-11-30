@@ -1,4 +1,8 @@
-# 中文预览
+# Go圣经: 《The Go Programming Language》
+
+[![](cover_small.jpg)](http://golang-china.github.io/gopl-zh/)
+
+## 中文预览
 
 http://golang-china.github.com/gopl-zh
 
@@ -8,11 +12,12 @@ http://golang-china.github.com/gopl-zh
 
 ### 从源文件构建:
 
-1. 运行 `go get github.com/golang-china/gopl-zh`, 获取 源文件
-2. 运行 `npm install gitbook-cli -g`, 安装 GitBook 命令行工具
-3. 运行 `go generate github.com/golang-china/gopl-zh`, 生成 `_book` 目录
-4. 打开 `_book/index.html` 文件
+先安装 Go语言环境, git 工具 和 GitBook 命令行工具(`npm install gitbook-cli -g` 命令).
 
-# 英文原版
+1. 运行 `go get github.com/golang-china/gopl-zh`, 获取 源文件
+2. 运行 `go generate github.com/golang-china/gopl-zh`, 生成 `_book` 目录
+3. 打开 `_book/index.html` 文件
+
+## 英文原版
 
 http://gopl.io/

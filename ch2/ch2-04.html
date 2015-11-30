@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="2.4" data-chapter-title="赋值" data-filepath="ch2/ch2-04.md" data-basepath=".." data-revision="Thu Nov 26 2015 15:27:48 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="2.4" data-chapter-title="赋值" data-filepath="ch2/ch2-04.md" data-basepath=".." data-revision="Mon Nov 30 2015 09:57:11 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -1133,7 +1133,7 @@
                         
                             <b>7.13.</b>
                         
-                        类似分支
+                        类型分支
                     </a>
             
             
@@ -2024,7 +2024,80 @@
                     <section class="normal" id="section-">
                     
                         <h2 id="24-&#x8D4B;&#x503C;">2.4. &#x8D4B;&#x503C;</h2>
-<p>TODO</p>
+<p>&#x4F7F;&#x7528;&#x8D4B;&#x503C;&#x8BED;&#x53E5;&#x53EF;&#x4EE5;&#x66F4;&#x65B0;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x503C;, &#x6700;&#x7B80;&#x5355;&#x7684;&#x8D4B;&#x503C;&#x8BED;&#x53E5;&#x662F;&#x5C06;&#x8981;&#x88AB;&#x8D4B;&#x503C;&#x7684;&#x53D8;&#x91CF;&#x653E;&#x5728; <code>=</code> &#x7684;&#x5DE6;&#x8FB9;, &#x65B0;&#x503C;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x653E;&#x5728; <code>=</code> &#x53F3;&#x8FB9;.</p>
+<pre><code class="lang-Go">x = <span class="hljs-number">1</span>                       <span class="hljs-comment">// &#x547D;&#x4EE4;&#x53D8;&#x91CF;&#x7684;&#x8D4B;&#x503C;</span>
+*p = <span class="hljs-constant">true</span>                   <span class="hljs-comment">// &#x901A;&#x8FC7;&#x6307;&#x9488;&#x95F4;&#x63A5;&#x8D4B;&#x503C;</span>
+person.name = <span class="hljs-string">&quot;bob&quot;</span>         <span class="hljs-comment">// &#x7ED3;&#x6784;&#x4F53;&#x5B57;&#x6BB5;&#x8D4B;&#x503C;</span>
+count[x] = count[x] * scale <span class="hljs-comment">// &#x6570;&#x7EC4;, &#x5207;&#x7247; &#x6216; &#x5B57;&#x5178;&#x7684; &#x5143;&#x7D20;&#x8D4B;&#x503C;</span>
+</code></pre>
+<p>&#x7279;&#x5B9A;&#x7684;&#x8D4B;&#x503C;&#x8BED;&#x53E5;&#x548C;&#x4E8C;&#x5143;&#x7B97;&#x672F;&#x590D;&#x5408;&#x64CD;&#x4F5C;&#x6709;&#x4E00;&#x4E2A;&#x7B80;&#x6D01;&#x5F62;&#x5F0F;, &#x4F8B;&#x5982;&#x4E0A;&#x9762;&#x6700;&#x540E;&#x7684;&#x8BED;&#x53E5;&#x53EF;&#x4EE5;&#x91CD;&#x5199;&#x4E3A;:</p>
+<pre><code class="lang-Go">count[x] *= scale
+</code></pre>
+<p>which saves us from having to repeat (and re-evaluate) the expression for the variable. </p>
+<p>&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x7701;&#x53BB;&#x5BF9;&#x53D8;&#x91CF;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x91CD;&#x590D;&#x8BA1;&#x7B97;.</p>
+<p>Numeric variables can also be incremented and decremented by ++ and -- statements: </p>
+<p>&#x6570;&#x503C;&#x53D8;&#x91CF;&#x4E5F;&#x53EF;&#x4EE5;&#x652F;&#x6301; <code>++</code> &#x9012;&#x589E;&#x548C; <code>--</code> &#x9012;&#x51CF;&#x8BED;&#x53E5;:</p>
+<pre><code class="lang-Go">v := <span class="hljs-number">1</span> 
+v++    <span class="hljs-comment">// &#x7B49;&#x4EF7;&#x65B9;&#x5F0F; v = v + 1; v &#x53D8;&#x6210; 2 </span>
+v--    <span class="hljs-comment">// &#x7B49;&#x4EF7;&#x65B9;&#x5F0F; v = v - 1; v &#x53D8;&#x6210; 1</span>
+</code></pre>
+<h3 id="241-&#x5143;&#x7EC4;&#x8D4B;&#x503C;">2.4.1. &#x5143;&#x7EC4;&#x8D4B;&#x503C;</h3>
+<p>&#x5143;&#x7EC4;&#x8D4B;&#x503C;&#x662F;&#x53E6;&#x4E00;&#x79CD;&#x5F62;&#x5F0F;&#x7684;&#x8D4B;&#x503C;&#x8BED;&#x53E5;, &#x5141;&#x8BB8;&#x540C;&#x65F6;&#x66F4;&#x65B0;&#x591A;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x503C;. &#x5728;&#x8D4B;&#x503C;&#x4E4B;&#x524D;, &#x8D4B;&#x503C;&#x8BED;&#x53E5;&#x53F3;&#x8FB9;&#x7684;&#x6240;&#x6709;&#x8868;&#x8FBE;&#x5F0F;&#x5C06;&#x4F1A;&#x5148;&#x8FDB;&#x884C;&#x6C42;&#x503C;, &#x7136;&#x540E;&#x518D;&#x7EDF;&#x4E00;&#x66F4;&#x65B0;&#x5DE6;&#x8FB9;&#x53D8;&#x91CF;&#x7684;&#x503C;. &#x8FD9;&#x5BF9;&#x4E8E;&#x5904;&#x7406;&#x6709;&#x4E9B;&#x540C;&#x65F6;&#x51FA;&#x73B0;&#x5728;&#x5143;&#x7EC4;&#x8D4B;&#x503C;&#x8BED;&#x53E5;&#x5DE6;&#x53F3;&#x4E24;&#x8FB9;&#x7684;&#x53D8;&#x91CF;&#x5F88;&#x6709;&#x5E2E;&#x52A9;, &#x4F8B;&#x5982;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x4EA4;&#x6362;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x503C;:</p>
+<pre><code class="lang-Go">x, y = y, x
+
+a[i], a[j] = a[j], a[i]
+</code></pre>
+<p>&#x6216;&#x8005;&#x662F;&#x8BA1;&#x7B97;&#x4E24;&#x4E2A;&#x6574;&#x6570;&#x503C;&#x7684;&#x7684;&#x6700;&#x5927;&#x516C;&#x7EA6;&#x6570;(GCD):</p>
+<pre><code class="lang-Go"><span class="hljs-keyword">func</span> gcd(x, y <span class="hljs-typename">int</span>) <span class="hljs-typename">int</span> {
+    <span class="hljs-keyword">for</span> y != <span class="hljs-number">0</span> {
+        x, y = y, x%y
+    }
+    <span class="hljs-keyword">return</span> x
+}
+</code></pre>
+<p>&#x6216;&#x8005;&#x662F;&#x8BA1;&#x7B97;&#x6590;&#x6CE2;&#x7EB3;&#x5951;&#x6570;&#x5217;(Fibonacci)&#x7684;&#x7B2C;N&#x4E2A;&#x6570;:</p>
+<pre><code class="lang-Go"><span class="hljs-keyword">func</span> fib(n <span class="hljs-typename">int</span>) <span class="hljs-typename">int</span> {
+    x, y := <span class="hljs-number">0</span>, <span class="hljs-number">1</span>
+    <span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; n; i++ {
+        x, y = y, x+y
+    }
+    <span class="hljs-keyword">return</span> x
+}
+</code></pre>
+<p>&#x5143;&#x7EC4;&#x8D4B;&#x503C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x4E00;&#x7CFB;&#x5217;&#x7410;&#x788E;&#x8D4B;&#x503C;&#x66F4;&#x7D27;&#x51D1;(&#x8BD1;&#x6CE8;: &#x7279;&#x522B;&#x662F;&#x5728;for&#x5FAA;&#x73AF;&#x7684;&#x521D;&#x59CB;&#x5316;&#x90E8;&#x5206;),</p>
+<pre><code class="lang-Go">i, j, k = <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>
+</code></pre>
+<p>&#x4F46;&#x5982;&#x679C;&#x8868;&#x8FBE;&#x5F0F;&#x592A;&#x590D;&#x6742;&#x7684;&#x8BDD;, &#x5E94;&#x8BE5;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x5143;&#x7EC4;&#x8D4B;&#x503C;; &#x56E0;&#x4E3A;&#x4E00;&#x4E2A;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x8D4B;&#x503C;&#x8BED;&#x53E5;&#x7684;&#x53EF;&#x8BFB;&#x6027;&#x4F1A;&#x66F4;&#x597D;.</p>
+<p>&#x67D0;&#x4E9B;&#x8868;&#x8FBE;&#x5F0F;&#x4F1A;&#x4EA7;&#x751F;&#x591A;&#x4E2A;&#x503C;, &#x6BD4;&#x5982;&#x8C03;&#x7528;&#x4E00;&#x4E2A;&#x6709;&#x591A;&#x4E2A;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x51FD;&#x6570;. 
+&#x5F53;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x51FA;&#x73B0;&#x5728;&#x5143;&#x7EC4;&#x8D4B;&#x503C;&#x53F3;&#x8FB9;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x65F6;(&#x8BD1;&#x6CE8;: &#x53F3;&#x8FB9;&#x4E0D;&#x80FD;&#x518D;&#x6709;&#x5176;&#x4ED6;&#x8868;&#x8FBE;&#x5F0F;), &#x5DE6;&#x8FB9;&#x53D8;&#x91CF;&#x7684;&#x6570;&#x76EE;&#x5FC5;&#x987B;&#x548C;&#x53F3;&#x8FB9;&#x4E00;&#x81F4;.</p>
+<pre><code class="lang-Go">f, err = os.Open(<span class="hljs-string">&quot;foo.txt&quot;</span>) <span class="hljs-comment">// function call returns two values</span>
+</code></pre>
+<p>&#x901A;&#x5E38;, &#x8FD9;&#x7C7B;&#x51FD;&#x6570;&#x4F1A;&#x7528;&#x989D;&#x5916;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x8868;&#x8FBE;&#x67D0;&#x79CD;&#x9519;&#x8BEF;&#x7C7B;&#x578B;, &#x4F8B;&#x5982; os.Open &#x662F;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; error &#x7C7B;&#x578B;&#x7684;&#x9519;&#x8BEF;, &#x8FD8;&#x6709;&#x4E00;&#x4E9B;&#x662F;&#x8FD4;&#x56DE;&#x5E03;&#x5C14;&#x503C;, &#x901A;&#x5E38;&#x88AB;&#x79F0;&#x4E3A;ok. &#x5728;&#x7A0D;&#x540E;&#x6211;&#x4EEC;&#x770B;&#x5230;&#x7684;&#x4E09;&#x4E2A;&#x64CD;&#x4F5C;&#x90FD;&#x662F;&#x7C7B;&#x4F3C;&#x7684;&#x884C;&#x4E3A;.  &#x5982;&#x679C; &#x5B57;&#x5178;&#x67E5;&#x627E;(&#xA7;4.3), &#x7C7B;&#x578B;&#x65AD;&#x8A00;(&#xA7;7.10), &#x6216; &#x901A;&#x9053;&#x63A5;&#x6536;(&#xA7;8.4.2) &#x51FA;&#x73B0;&#x5728;&#x8D4B;&#x503C;&#x8BED;&#x53E5;&#x7684;&#x53F3;&#x8FB9;, &#x5B83;&#x4EEC;&#x90FD;&#x5C06;&#x4EA7;&#x751F;&#x4E24;&#x4E2A;&#x7ED3;&#x679C;, &#x6709;&#x4E00;&#x4E2A;&#x989D;&#x5916;&#x7684;&#x5E03;&#x5C14;&#x7ED3;&#x679C;&#x8868;&#x793A;&#x64CD;&#x4F5C;&#x662F;&#x5426;&#x6210;&#x529F;:</p>
+<pre><code class="lang-Go">v, ok = m[key]             <span class="hljs-comment">// map lookup</span>
+v, ok = x.(T)              <span class="hljs-comment">// type assertion</span>
+v, ok = &lt;-ch               <span class="hljs-comment">// channel receive</span>
+</code></pre>
+<p>As with variable declarations, we can assign unwanted values to the blank identi&#xFB01;er:</p>
+<p>&#x548C;&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;&#x4E00;&#x6837;, &#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;&#x4E0B;&#x5212;&#x7EBF;&#x7A7A;&#x767D;&#x6807;&#x8BC6;&#x7B26; <code>_</code> &#x6765;&#x4E22;&#x5F03;&#x4E0D;&#x9700;&#x8981;&#x7684;&#x503C;.</p>
+<pre><code class="lang-Go">_, err = io.Copy(dst, src) <span class="hljs-comment">// &#x4E22;&#x5F03;&#x5B57;&#x8282;&#x6570;</span>
+_, ok = x.(T)              <span class="hljs-comment">// &#x53EA;&#x68C0;&#x6D4B;&#x7C7B;&#x578B;, &#x5FFD;&#x7565;&#x5177;&#x4F53;&#x503C;</span>
+</code></pre>
+<h3 id="242-&#x53EF;&#x8D4B;&#x503C;&#x6027;">2.4.2. &#x53EF;&#x8D4B;&#x503C;&#x6027;</h3>
+<p>&#x8D4B;&#x503C;&#x8BED;&#x53E5;&#x662F;&#x663E;&#x793A;&#x7684;&#x8D4B;&#x503C;&#x5F62;&#x5F0F;, &#x4F46;&#x662F;&#x7A0B;&#x5E8F;&#x4E2D;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#x5730;&#x65B9;&#x4F1A;&#x53D1;&#x9001;&#x9690;&#x5F0F;&#x7684;&#x8D4B;&#x503C;&#x884C;&#x4E3A;: &#x51FD;&#x6570;&#x8C03;&#x7528;&#x5C06;&#x9690;&#x5F0F;&#x5730;&#x5C06;&#x8C03;&#x7528;&#x53C2;&#x6570;&#x7684;&#x503C;&#x8D4B;&#x503C;&#x7ED9;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x53D8;&#x91CF;, &#x4E00;&#x4E2A;&#x8FD4;&#x56DE;&#x8BED;&#x53E5;&#x5C06;&#x9690;&#x5F0F;&#x5730;&#x5C06;&#x8FD4;&#x56DE;&#x64CD;&#x4F5C;&#x7684;&#x503C;&#x8D4B;&#x503C;&#x7ED9;&#x7ED3;&#x679C;&#x53D8;&#x91CF;, &#x4E00;&#x4E2A;&#x590D;&#x5408;&#x7C7B;&#x578B;&#x7684;&#x5B57;&#x9762;&#x91CF;(&#xA7;4.2)&#x4E5F;&#x4F1A;&#x4EA7;&#x751F;&#x8D4B;&#x503C;&#x884C;&#x4E3A;. &#x4F8B;&#x5982;&#x4E0B;&#x9762;&#x7684;&#x8BED;&#x53E5;:</p>
+<pre><code class="lang-Go">medals := []<span class="hljs-typename">string</span>{<span class="hljs-string">&quot;gold&quot;</span>, <span class="hljs-string">&quot;silver&quot;</span>, <span class="hljs-string">&quot;bronze&quot;</span>}
+</code></pre>
+<p>&#x9690;&#x5F0F;&#x5730;&#x5BF9;&#x5207;&#x7247;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x8D4B;&#x503C;&#x64CD;&#x4F5C;, &#x7C7B;&#x4F3C;&#x8FD9;&#x6837;&#x5199;&#x7684;&#x884C;&#x4E3A;:</p>
+<pre><code class="lang-Go">medals[<span class="hljs-number">0</span>] = <span class="hljs-string">&quot;gold&quot;</span> 
+medals[<span class="hljs-number">1</span>] = <span class="hljs-string">&quot;silver&quot;</span> 
+medals[<span class="hljs-number">2</span>] = <span class="hljs-string">&quot;bronze&quot;</span>
+</code></pre>
+<p>&#x5B57;&#x5178;&#x548C;&#x7BA1;&#x9053;&#x7684;&#x5143;&#x7D20;, &#x867D;&#x7136;&#x4E0D;&#x662F;&#x666E;&#x901A;&#x7684;&#x53D8;&#x91CF;, &#x4F46;&#x662F;&#x4E5F;&#x6709;&#x7C7B;&#x4F3C;&#x7684;&#x9690;&#x5F0F;&#x8D4B;&#x503C;&#x884C;&#x4E3A;.</p>
+<p>&#x4E0D;&#x7BA1;&#x662F;&#x9690;&#x5F0F;&#x8FD8;&#x662F;&#x663E;&#x793A;&#x5730;&#x8D4B;&#x503C;, &#x5728;&#x8D4B;&#x503C;&#x8BED;&#x53E5;&#x5750;&#x6807;&#x7684;&#x53D8;&#x91CF;&#x548C;&#x53F3;&#x8FB9;&#x6700;&#x7EC8;&#x7684;&#x6C42;&#x5230;&#x7684;&#x503C;&#x5FC5;&#x987B;&#x6709;&#x76F8;&#x540C;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;. &#x66F4;&#x76F4;&#x767D;&#x5730;&#x8BF4;, &#x53EA;&#x6709;&#x53F3;&#x8FB9;&#x7684;&#x503C;&#x5BF9;&#x4E8E;&#x5DE6;&#x8FB9;&#x7684;&#x53D8;&#x91CF;&#x662F;&#x53EF;&#x8D4B;&#x503C;&#x7684;, &#x8D4B;&#x503C;&#x8BED;&#x53E5;&#x624D;&#x662F;&#x5141;&#x8BB8;&#x7684;.</p>
+<p>&#x53EF;&#x8D4B;&#x503C;&#x6027;&#x7684;&#x89C4;&#x5219;&#x5BF9;&#x4E8E;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x6709;&#x4E0D;&#x540C;&#x8981;&#x6C42;, &#x5BF9;&#x6BCF;&#x4E2A;&#x65B0;&#x7C7B;&#x578B;&#x6709;&#x5173;&#x7684;&#x5730;&#x65B9;&#x6211;&#x4EEC;&#x4F1A;&#x4E13;&#x95E8;&#x89E3;&#x91CA;.
+&#x5BF9;&#x4E8E;&#x76EE;&#x524D;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x8BA8;&#x8BBA;&#x8FC7;&#x7684;&#x7C7B;&#x578B;, &#x5B83;&#x7684;&#x89C4;&#x5219;&#x662F;&#x7B80;&#x5355;&#x7684;: &#x7C7B;&#x578B;&#x5FC5;&#x987B;&#x5B8C;&#x5168;&#x5339;&#x914D;, nil &#x53EF;&#x4EE5;&#x8D4B;&#x503C;&#x7ED9;&#x4EFB;&#x4F55;&#x6307;&#x9488;&#x6216;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;. &#x5E38;&#x91CF;(&#xA7;3.6)&#x6709;&#x66F4;&#x7075;&#x6D3B;&#x7684;&#x89C4;&#x5219;, &#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x663E;&#x793A;&#x7C7B;&#x578B;&#x8F6C;&#x6362;.</p>
+<p>&#x5BF9;&#x4E8E;&#x4E24;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x7528; <code>==</code> &#x6216; <code>!=</code> &#x8FDB;&#x884C;&#x76F8;&#x7B49;&#x6BD4;&#x8F83;&#x7684;&#x80FD;&#x529B;&#x4E5F;&#x548C;&#x53EF;&#x8D4B;&#x503C;&#x80FD;&#x529B;&#x6709;&#x5173;&#x7CFB;:
+&#x5BF9;&#x4E8E;&#x4EFB;&#x4F55;&#x7684;&#x6BD4;&#x8F83;, &#x7B2C;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;&#x5FC5;&#x987B;&#x662F;&#x53EF;&#x7528;&#x4E8E;&#x7B2C;&#x4E8C;&#x4E2A;&#x64CD;&#x4F5C;&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x7684;&#x8D4B;&#x503C;&#x7684;, &#x53CD;&#x4E4B;&#x4F9D;&#x7136;.
+&#x548C;&#x524D;&#x9762;&#x4E00;&#x6837;, &#x6211;&#x4EEC;&#x4F1A;&#x5BF9;&#x6BCF;&#x4E2A;&#x65B0;&#x7C7B;&#x578B;&#x6BD4;&#x8F83;&#x6709;&#x5173;&#x7684;&#x5730;&#x65B9;&#x4F1A;&#x505A;&#x4E13;&#x95E8;&#x89E3;&#x91CA;.</p>
 
                     
                     </section>

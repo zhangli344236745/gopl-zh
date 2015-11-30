@@ -10,12 +10,12 @@
  - [x] 1.6 Fetching URLs Concurrently
  - [x] 1.7 A Web Server
  - [x] 1.8 Loose Ends
-- [ ] Chapter 2: Program Structure
- - [ ] 2.1 Names
- - [ ] 2.2 Declarations
- - [ ] 2.3 Variables
- - [ ] 2.4 Assignments
- - [ ] 2.5 Type Declarations
+- [x] Chapter 2: Program Structure
+ - [x] 2.1 Names
+ - [x] 2.2 Declarations
+ - [x] 2.3 Variables
+ - [x] 2.4 Assignments
+ - [x] 2.5 Type Declarations
  - [ ] 2.6 Packages and Files
  - [ ] 2.7 Scope
 - [ ] Chapter 3: Basic Data Types
@@ -43,8 +43,8 @@
  - [ ] 5.8 Deferred Function Calls
  - [ ] 5.9 Panic
  - [ ] 5.10 Recover
-- [ ] Chapter 6:. Methods
- - [ ] 6.1 Method Declarations
+- [x] Chapter 6: Methods
+ - [x] 6.1 Method Declarations
  - [ ] 6.2 Methods with a Pointer Receiver
  - [ ] 6.3 Composing Types by Struct Embedding
  - [ ] 6.4 Method Values and Expressions
