@@ -16,8 +16,8 @@
  - [x] 2.3 Variables
  - [x] 2.4 Assignments
  - [x] 2.5 Type Declarations
- - [ ] 2.6 Packages and Files
- - [ ] 2.7 Scope
+ - [x] 2.6 Packages and Files
+ - [x] 2.7 Scope
 - [ ] Chapter 3: Basic Data Types
  - [ ] 3.1 Integers
  - [ ] 3.2 Floating-Point Numbers
