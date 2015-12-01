@@ -86,7 +86,7 @@
  - [ ] 9.6 The Race Detector
  - [ ] 9.7 Example: Concurrent Non-Blocking Cache
  - [ ] 9.8 Goroutines and Threads
-- [ ] Chapter 10: Packages and the Go Tool
+- [x] Chapter 10: Packages and the Go Tool
  - [ ] 10.1 Introduction
  - [ ] 10.2 Import Paths
  - [ ] 10.3 The Package Declaration
