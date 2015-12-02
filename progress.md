@@ -87,8 +87,8 @@
  - [ ] 9.7 Example: Concurrent Non-Blocking Cache
  - [ ] 9.8 Goroutines and Threads
 - [x] Chapter 10: Packages and the Go Tool
- - [ ] 10.1 Introduction
- - [ ] 10.2 Import Paths
+ - [x] 10.1 Introduction
+ - [x] 10.2 Import Paths
  - [ ] 10.3 The Package Declaration
  - [ ] 10.4 Import Declarations
  - [ ] 10.5 Blank Imports
