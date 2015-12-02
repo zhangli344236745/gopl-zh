@@ -116,7 +116,7 @@
   * [获取结构体字段标识](ch12/ch12-07.md)
   * [显示一个类型的方法集](ch12/ch12-08.md)
   * [几点忠告](ch12/ch12-09.md)
-* [低级编程](ch13/ch13.md)
+* [底层编程](ch13/ch13.md)
   * [unsafe.Sizeof, Alignof 和 Offsetof](ch13/ch13-01.md)
   * [unsafe.Pointer](ch13/ch13-02.md)
   * [示例: 深度相等判断](ch13/ch13-03.md)
