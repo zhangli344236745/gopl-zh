@@ -90,7 +90,7 @@
  - [x] 10.1 Introduction
  - [x] 10.2 Import Paths
  - [x] 10.3 The Package Declaration
- - [ ] 10.4 Import Declarations
+ - [x] 10.4 Import Declarations
  - [ ] 10.5 Blank Imports
  - [ ] 10.6 Packages and Naming
  - [ ] 10.7 The Go Tool
