@@ -47,7 +47,7 @@
  - [x] 6.1 Method Declarations
  - [x] 6.2 Methods with a Pointer Receiver
  - [ ] 6.3 Composing Types by Struct Embedding
- - [ ] 6.4 Method Values and Expressions
+ - [x] 6.4 Method Values and Expressions
  - [ ] 6.5 Example: Bit Vector Type
  - [ ] 6.6 Encapsulation
 - [ ] Chapter 7: Interfaces
@@ -91,7 +91,7 @@
  - [x] 10.2 Import Paths
  - [x] 10.3 The Package Declaration
  - [x] 10.4 Import Declarations
- - [ ] 10.5 Blank Imports
+ - [x] 10.5 Blank Imports
  - [ ] 10.6 Packages and Naming
  - [ ] 10.7 The Go Tool
 - [ ] Chapter 11: Testing
