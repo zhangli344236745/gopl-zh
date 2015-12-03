@@ -45,7 +45,7 @@
  - [ ] 5.10 Recover
 - [x] Chapter 6: Methods
  - [x] 6.1 Method Declarations
- - [ ] 6.2 Methods with a Pointer Receiver
+ - [x] 6.2 Methods with a Pointer Receiver
  - [ ] 6.3 Composing Types by Struct Embedding
  - [ ] 6.4 Method Values and Expressions
  - [ ] 6.5 Example: Bit Vector Type
