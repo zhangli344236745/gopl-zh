@@ -17,6 +17,12 @@ int bz2compress(bz_stream *s, int action,
   int r = BZ2_bzCompress(s, action);
   *inlen -= s->avail_in;
   *outlen -= s->avail_out;
+
+  /* "C code may store a Go pointer in C memory subject to rule 2: 
+   * it must stop storing the pointer before it returns to Go." */
+  s->next_in = NULL;
+  s->next_out = NULL;
+  
   return r;
 }
 

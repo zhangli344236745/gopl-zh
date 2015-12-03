@@ -2,6 +2,11 @@
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 // See page 362.
+// This is the version that appears in print,
+// but it does not comply with the proposed
+// rules for passing pointers between Go and C.
+// (https://github.com/golang/proposal/blob/master/design/12416-cgo-pointers.md)
+// See gopl.io/ch13/bzip for an updated version.
 //!+
 
 // Package bzip provides a writer that uses bzip2 compression (bzip.org).
