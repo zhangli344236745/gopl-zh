@@ -50,8 +50,8 @@
  - [x] 6.4 Method Values and Expressions
  - [ ] 6.5 Example: Bit Vector Type
  - [ ] 6.6 Encapsulation
-- [ ] Chapter 7: Interfaces
- - [ ] 7.1 Interfaces as Contracts
+- [x] Chapter 7: Interfaces
+ - [x] 7.1 Interfaces as Contracts
  - [ ] 7.2 Interface Types
  - [ ] 7.3 Interface Satisfaction
  - [ ] 7.4 Parsing Flags with flag.Value
