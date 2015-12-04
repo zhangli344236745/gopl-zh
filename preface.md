@@ -5,6 +5,7 @@
 - 此中文版 **读书笔记** 在线预览: http://golang-china.github.io/gopl-zh
 - 此中文版 **读书笔记** 的源文件: http://github.com/golang-china/gopl-zh
 - 此中文版 **读书笔记** 项目进度: http://github.com/golang-china/gopl-zh/blob/master/progress.md
+- 此中文版 **读书笔记** 下载链接: http://github.com/golang-china/gopl-zh/archive/gh-pages.zip
 - 原版官网: http://gopl.io
 
 [![](cover_small.jpg)](https://github.com/golang-china/gopl-zh)
