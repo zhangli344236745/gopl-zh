@@ -48,7 +48,7 @@
  - [x] 6.2 Methods with a Pointer Receiver
  - [ ] 6.3 Composing Types by Struct Embedding
  - [x] 6.4 Method Values and Expressions
- - [ ] 6.5 Example: Bit Vector Type
+ - [x] 6.5 Example: Bit Vector Type
  - [ ] 6.6 Encapsulation
 - [x] Chapter 7: Interfaces
  - [x] 7.1 Interfaces as Contracts
