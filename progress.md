@@ -66,7 +66,7 @@
  - [ ] 7.13 Type Switches
  - [ ] 7.14 Example: Token-Based XML Decoding
  - [ ] 7.15 A Few Words of Advice
-- [ ] Chapter 8: Goroutines and Channels
+- [x] Chapter 8: Goroutines and Channels
  - [ ] 8.1 Goroutines
  - [ ] 8.2 Example: Concurrent Clock Server
  - [ ] 8.3 Example: Concu rent Echo Server
