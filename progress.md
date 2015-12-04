@@ -45,13 +45,13 @@
  - [ ] 5.10 Recover
 - [x] Chapter 6: Methods
  - [x] 6.1 Method Declarations
- - [ ] 6.2 Methods with a Pointer Receiver
+ - [x] 6.2 Methods with a Pointer Receiver
  - [ ] 6.3 Composing Types by Struct Embedding
- - [ ] 6.4 Method Values and Expressions
+ - [x] 6.4 Method Values and Expressions
  - [ ] 6.5 Example: Bit Vector Type
  - [ ] 6.6 Encapsulation
-- [ ] Chapter 7: Interfaces
- - [ ] 7.1 Interfaces as Contracts
+- [x] Chapter 7: Interfaces
+ - [x] 7.1 Interfaces as Contracts
  - [ ] 7.2 Interface Types
  - [ ] 7.3 Interface Satisfaction
  - [ ] 7.4 Parsing Flags with flag.Value
@@ -86,13 +86,13 @@
  - [ ] 9.6 The Race Detector
  - [ ] 9.7 Example: Concurrent Non-Blocking Cache
  - [ ] 9.8 Goroutines and Threads
-- [ ] Chapter 10: Packages and the Go Tool
- - [ ] 10.1 Introduction
- - [ ] 10.2 Import Paths
- - [ ] 10.3 The Package Declaration
- - [ ] 10.4 Import Declarations
- - [ ] 10.5 Blank Imports
- - [ ] 10.6 Packages and Naming
+- [x] Chapter 10: Packages and the Go Tool
+ - [x] 10.1 Introduction
+ - [x] 10.2 Import Paths
+ - [x] 10.3 The Package Declaration
+ - [x] 10.4 Import Declarations
+ - [x] 10.5 Blank Imports
+ - [x] 10.6 Packages and Naming
  - [ ] 10.7 The Go Tool
 - [ ] Chapter 11: Testing
  - [ ] 11.1 The go test Tool

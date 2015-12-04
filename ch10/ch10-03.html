@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="10.3" data-chapter-title="包声明" data-filepath="ch10/ch10-03.md" data-basepath=".." data-revision="Tue Dec 01 2015 12:27:28 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="10.3" data-chapter-title="包声明" data-filepath="ch10/ch10-03.md" data-basepath=".." data-revision="Fri Dec 04 2015 10:23:24 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -1888,7 +1888,7 @@
                         
                             <b>13.</b>
                         
-                        低级编程
+                        底层编程
                     </a>
             
             
@@ -2024,7 +2024,23 @@
                     <section class="normal" id="section-">
                     
                         <h2 id="103-&#x5305;&#x58F0;&#x660E;">10.3. &#x5305;&#x58F0;&#x660E;</h2>
-<p>TODO</p>
+<p>&#x5728;&#x6BCF;&#x4E2A;Go&#x6E90;&#x6587;&#x4EF6;&#x7684;&#x5F00;&#x5934;&#x90FD;&#x5FC5;&#x987B;&#x6709;&#x5305;&#x58F0;&#x660E;. &#x4E3B;&#x8981;&#x7684;&#x76EE;&#x7684;&#x662F;&#x786E;&#x5B9A;&#x5F53;&#x524D;&#x5305;&#x88AB;&#x5176;&#x4ED6;&#x5305;&#x5BFC;&#x5165;&#x65F6;&#x9ED8;&#x8BA4;&#x7684;&#x6807;&#x8BC6;&#x7B26;(&#x79F0;&#x4E3A;&#x5305;&#x540D;).</p>
+<p>&#x4F8B;&#x5982;, math/rand &#x5305;&#x7684;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x5F00;&#x5934;&#x90FD;&#x662F; <code>package rand</code> &#x5305;&#x58F0;&#x660E;, &#x6240;&#x6709; &#x5F53;&#x4F60;&#x5BFC;&#x5165;&#x8FD9;&#x4E2A;&#x5305;, &#x4F60;&#x53EF;&#x4EE5;&#x7528; rand.Int, rand.Float64 &#x7684;&#x65B9;&#x5F0F;&#x8BBF;&#x95EE;&#x5305;&#x7684;&#x6210;&#x5458;.</p>
+<pre><code class="lang-Go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;math/rand&quot;</span>
+)
+
+<span class="hljs-keyword">func</span> main() {
+    fmt.Println(rand.Int())
+}
+</code></pre>
+<p>&#x901A;&#x5E38;&#x6765;&#x8BF4;, &#x9ED8;&#x8BA4;&#x7684;&#x5305;&#x540D;&#x5C31;&#x662F;&#x5305;&#x5BFC;&#x5165;&#x8DEF;&#x5F84;&#x540D;&#x7684;&#x6700;&#x540E;&#x4E00;&#x6BB5;, &#x56E0;&#x6B64;&#x5373;&#x4F7F;&#x4E24;&#x4E2A;&#x5305;&#x7684;&#x5BFC;&#x5165;&#x8DEF;&#x5F84;&#x4E0D;&#x540C;, &#x5B83;&#x4EEC;&#x4F9D;&#x7136;&#x53EF;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x76F8;&#x540C;&#x7684;&#x5305;&#x540D;. &#x4F8B;&#x5982;, math/rand &#x548C; crypto/rand &#x5305;&#x7684;&#x540D;&#x5B57;&#x90FD;&#x662F; rand. &#x7A0D;&#x540E;&#x6211;&#x4EEC;&#x5C06;&#x770B;&#x5230;&#x5982;&#x4F55;&#x540C;&#x65F6;&#x5BFC;&#x5165;&#x4E24;&#x4E2A;&#x5305;&#x540D;&#x5B57;&#x76F8;&#x540C;&#x7684;&#x5305;.</p>
+<p>&#x5173;&#x4E8E;&#x9ED8;&#x8BA4;&#x5305;&#x540D;&#x4E00;&#x822C;&#x91C7;&#x7528;&#x5BFC;&#x5165;&#x8DEF;&#x5F84;&#x540D;&#x7684;&#x6700;&#x540E;&#x4E00;&#x6BB5;&#x7684;&#x7EA6;&#x5B9A;&#x6709;&#x4E09;&#x79CD;&#x4F8B;&#x5916;&#x60C5;&#x51B5;. &#x7B2C;&#x4E00;&#x4E2A;&#x4F8B;&#x5916;&#x662F;&#x5305;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;, &#x4E5F;&#x5C31;&#x662F; main &#x5305;, &#x8FD9;&#x65F6;&#x5019;main&#x5305;&#x672C;&#x8EAB;&#x7684;&#x5BFC;&#x5165;&#x8DEF;&#x5F84;&#x662F;&#x65E0;&#x5173;&#x7D27;&#x8981;&#x7684;. &#x8FD9;&#x662F;&#x7ED9; go build (&#xA7;10.7.3) &#x6784;&#x5EFA;&#x547D;&#x4EE4;&#x4E00;&#x4E2A;&#x4FE1;&#x606F;, &#x5FC5;&#x987B;&#x8C03;&#x7528;&#x8FDE;&#x63A5;&#x5668;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;.</p>
+<p>&#x7B2C;&#x4E8C;&#x4E2A;&#x4F8B;&#x5916;&#x662F;&#x5305;&#x6240;&#x5728;&#x7684;&#x76EE;&#x5F55;&#x4E2D;&#x53EF;&#x80FD;&#x6709;&#x4E00;&#x4E9B;&#x6587;&#x4EF6;&#x540D;&#x662F;&#x4EE5;<em>test.go&#x4E3A;&#x540E;&#x7F00;&#x7684;Go&#x6E90;&#x6587;&#x4EF6;(&#x8BD1;&#x6CE8;: &#x524D;&#x9762;&#x5FC5;&#x987B;&#x6709;&#x5176;&#x4ED6;&#x7684;&#x5B57;&#x7B26;, &#x56E0;&#x4E3A; </em> &#x524D;&#x7F00;&#x7684;&#x6E90;&#x6587;&#x4EF6;&#x53EF;&#x80FD;&#x662F;&#x88AB;&#x5FFD;&#x7565;&#x7684;.), &#x5E76;&#x4E14;&#x8FD9;&#x4E9B;&#x6E90;&#x6587;&#x4EF6;&#x58F0;&#x660E;&#x7684;&#x5305;&#x540D;&#x4E5F;&#x662F;&#x4EE5;_test&#x4E3A;&#x540E;&#x7F00;&#x540D;&#x7684;. &#x8FD9;&#x79CD;&#x76EE;&#x5F55;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E24;&#x4E2A;&#x5305;: &#x4E00;&#x4E2A;&#x666E;&#x901A;&#x5305;, &#x52A0;&#x4E00;&#x4E2A;&#x5916;&#x90E8;&#x6D4B;&#x8BD5;&#x5305;. &#x4EE5; _test &#x4E3A;&#x540E;&#x7F00;&#x5305;&#x540D;&#x7684;&#x5916;&#x90E8;&#x6D4B;&#x8BD5;&#x5305;&#x7531; go test &#x547D;&#x4EE4;&#x72EC;&#x7ACB;&#x7F16;&#x8BD1;, &#x4E24;&#x4E2A;&#x5305;&#x662F;&#x76F8;&#x4E92;&#x72EC;&#x7ACB;&#x7684;. &#x5916;&#x90E8;&#x6D4B;&#x8BD5;&#x5305;&#x4E00;&#x822C;&#x7528;&#x6765;&#x907F;&#x514D;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x5BFC;&#x5165;&#x5305;&#x7684;&#x5FAA;&#x73AF;&#x5BFC;&#x5165;&#x4F9D;&#x8D56;, &#x5177;&#x4F53;&#x7EC6;&#x8282;&#x6211;&#x4EEC;&#x5C06;&#x5728; 11.2.4 &#x4E2D;&#x4ECB;&#x7ECD;.</p>
+<p>&#x7B2C;&#x4E09;&#x4E2A;&#x4F8B;&#x5916;&#x662F;&#x4E00;&#x4E9B;&#x4F9D;&#x8D56;&#x7248;&#x672C;&#x53F7;&#x7684;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x4F1A;&#x5728;&#x5BFC;&#x5165;&#x8DEF;&#x5F84;&#x540E;&#x8FFD;&#x52A0;&#x7248;&#x672C;&#x53F7;&#x4FE1;&#x606F;, &#x4F8B;&#x5982; &quot;gopkg.in/yaml.v2&quot;. &#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x5305;&#x7684;&#x540D;&#x5B57;&#x5E76;&#x4E0D;&#x5305;&#x542B;&#x7248;&#x672C;&#x53F7;&#x540E;&#x7F00;, &#x53EA;&#x662F;yaml.</p>
 
                     
                     </section>

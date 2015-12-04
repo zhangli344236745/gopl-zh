@@ -46,7 +46,7 @@
     <body>
         
         
-    <div class="book" data-level="14" data-chapter-title="勘误" data-filepath="errata.md" data-basepath="." data-revision="Tue Dec 01 2015 12:27:28 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="14" data-chapter-title="勘误" data-filepath="errata.md" data-basepath="." data-revision="Fri Dec 04 2015 10:23:24 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -1886,7 +1886,7 @@
                         
                             <b>13.</b>
                         
-                        低级编程
+                        底层编程
                     </a>
             
             
@@ -2022,31 +2022,38 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="errata">Errata</h1>
-<p><strong>p.9, ?2</strong>: for &quot;can compared&quot;, read &quot;can be compared&quot;.
+<p><strong>p.9, &#xB6;2:</strong> for &quot;can compared&quot;, read &quot;can be compared&quot;.
     (Thanks to Antonio Mac&#xED;as Ojeda, 2015-10-22.)</p>
-<p><strong>p.13</strong>: As printed, the <code>gopl.io/ch1/lissajous</code> program
+<p><strong>p.13:</strong> As printed, the <code>gopl.io/ch1/lissajous</code> program
 is deterministic, not random.  We&apos;ve added the statement below to
 the downloadable program so that it prints a pseudo-random image
 each time it is run. (Thanks to Randall McPherson, 2015-10-19.)</p>
 <p><code>rand.Seed(time.Now().UTC().UnixNano())</code></p>
-<p><strong>p.52, ?2</strong>: for &quot;an synonym&quot;, read &quot;a synonym&quot;, twice.</p>
-<p><strong>p.68</strong>: the table of UTF-8 encodings is missing a bit from each first byte.
+<p><strong>p.19, &#xB6;2:</strong> For &quot;Go&apos;s libraries makes&quot;, read &quot;Go&apos;s library makes&quot;. (Thanks to Victor Farazdagi, 2015-11-30.)</p>
+<p><strong>p.40, &#xB6;1:</strong> The paragraph should end with a period, not a comma. (Thanks to Victor Farazdagi, 2015-11-30.)</p>
+<p><strong>p.43, &#xB6;3:</strong> Import declarations are explained in &#xA7;10.4, not &#xA7;10.3. (Thanks to Peter Jurgensen, 2015-11-21.)</p>
+<p><strong>p.52, &#xB6;2:</strong> for &quot;an synonym&quot;, read &quot;a synonym&quot;, twice.</p>
+<p><strong>p.68:</strong> the table of UTF-8 encodings is missing a bit from each first byte.
 The corrected table is shown below.  (Thanks to Akshay Kumar, 2015-11-02.)</p>
 <pre><code>0xxxxxxx                             runes 0?127     (ASCII)
 110xxxxx 10xxxxxx                    128?2047        (values &lt;128 unused)
 1110xxxx 10xxxxxx 10xxxxxx           2048?65535      (values &lt;2048 unused)
 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx  65536?0x10ffff  (other values unused)
-</code></pre><p><strong>p.74</strong>: the comment in <code>gopl.io/ch3/printints</code> should say
+</code></pre><p><strong>p.74:</strong> the comment in <code>gopl.io/ch3/printints</code> should say
 <code>fmt.Sprint</code>, not <code>fmt.Sprintf</code>.</p>
-<p><strong>p.76</strong>: the comment <code>// &quot;time.Duration 5ms0s</code> should have a closing double-quotation mark.</p>
-<p><strong>p.79, ?4</strong>: &quot;When an untyped constant is
+<p><strong>p.76:</strong> the comment <code>// &quot;time.Duration 5ms0s</code> should have a closing double-quotation mark.</p>
+<p><strong>p.79, &#xB6;4:</strong> &quot;When an untyped constant is
 assigned to a variable, as in the first statement below, or
 appears on the right-hand side of a variable declaration with an
 explicit type, as in the other three statements, ...&quot; has it backwards:
 the <i>first</i>
 statement is a declaration; the other three are assignments.
 (Thanks to Yoshiki Shibata, 2015-11-09.)</p>
-<p><strong>p.166, ?2</strong>: for &quot;way&quot;, read &quot;a way&quot;.</p>
+<p><strong>p.132, code display following &#xB6;3:</strong> the final comment should read:
+<code>// compile error: can&apos;t assign func(int, int) int to func(int) int</code>
+(Thanks to Toni Suter, 2015-11-21.)</p>
+<p><strong>p.166, &#xB6;2:</strong> for &quot;way&quot;, read &quot;a way&quot;.</p>
+<p><strong>p.362:</strong> the <code>gopl.io/ch13/bzip</code> program does not comply with the <a href="https://github.com/golang/proposal/blob/master/design/12416-cgo-pointers.md" target="_blank">proposed rules for passing pointers between Go and C code</a> because the C function <code>bz2compress</code> temporarily stores a Go pointer (in) into the Go heap (the <code>bz_stream</code> variable). The <code>bz_stream</code> variable should be allocated, and explicitly freed after the call to <code>BZ2_bzCompressEnd</code>, by C functions. (Thanks to Joe Tsai, 2015-11-18.)</p>
 
                     
                     </section>
