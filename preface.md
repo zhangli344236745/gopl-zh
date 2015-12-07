@@ -1,6 +1,6 @@
-# 关于中文版
+# 关于 [《Go圣经读书笔记》](http://golang-china.github.io/gopl-zh)
 
-作为 [Go圣经](http://golang-china.github.io/gopl-zh) [《The Go Programming Language》](http://gopl.io/) (中文名[《Go编程语言》](http://golang-china.github.io/gopl-zh)) 英文原版纸质图书的购买者, 这是我们的一个中文版 **读书笔记** 和 **习题解答**, 仅供学习交流用.
+作为 [《The Go Programming Language》](http://gopl.io/) (中文名[《Go编程语言》](http://golang-china.github.io/gopl-zh)) 英文原版纸质图书的购买者, [《Go圣经读书笔记》](http://golang-china.github.io/gopl-zh) 是我们的 **读书笔记** 和 **习题解答**, 仅供学习交流用.
 
 - 此中文版 **读书笔记** 在线预览: http://golang-china.github.io/gopl-zh
 - 此中文版 **读书笔记** 的源文件: http://github.com/golang-china/gopl-zh
