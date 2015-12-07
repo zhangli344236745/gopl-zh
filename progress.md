@@ -18,7 +18,7 @@
  - [x] 2.5 Type Declarations
  - [x] 2.6 Packages and Files
  - [x] 2.7 Scope
-- [ ] Chapter 3: Basic Data Types
+- [x] Chapter 3: Basic Data Types
  - [ ] 3.1 Integers
  - [ ] 3.2 Floating-Point Numbers
  - [ ] 3.3 Complex Numbers
@@ -46,10 +46,10 @@
 - [x] Chapter 6: Methods
  - [x] 6.1 Method Declarations
  - [x] 6.2 Methods with a Pointer Receiver
- - [ ] 6.3 Composing Types by Struct Embedding
+ - [x] 6.3 Composing Types by Struct Embedding
  - [x] 6.4 Method Values and Expressions
- - [ ] 6.5 Example: Bit Vector Type
- - [ ] 6.6 Encapsulation
+ - [x] 6.5 Example: Bit Vector Type
+ - [x] 6.6 Encapsulation
 - [x] Chapter 7: Interfaces
  - [x] 7.1 Interfaces as Contracts
  - [ ] 7.2 Interface Types
@@ -66,9 +66,9 @@
  - [ ] 7.13 Type Switches
  - [ ] 7.14 Example: Token-Based XML Decoding
  - [ ] 7.15 A Few Words of Advice
-- [ ] Chapter 8: Goroutines and Channels
- - [ ] 8.1 Goroutines
- - [ ] 8.2 Example: Concurrent Clock Server
+- [x] Chapter 8: Goroutines and Channels
+ - [x] 8.1 Goroutines
+ - [x] 8.2 Example: Concurrent Clock Server
  - [ ] 8.3 Example: Concu rent Echo Server
  - [ ] 8.4 Channels
  - [ ] 8.5 Looping in Parallel

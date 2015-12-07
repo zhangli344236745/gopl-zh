@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="6.2" data-chapter-title="基于指针对象的方法" data-filepath="ch6/ch6-02.md" data-basepath=".." data-revision="Fri Dec 04 2015 10:23:24 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="6.2" data-chapter-title="基于指针对象的方法" data-filepath="ch6/ch6-02.md" data-basepath=".." data-revision="Mon Dec 07 2015 11:23:53 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -1975,14 +1975,50 @@
             
         </li>
     
-        <li class="chapter " data-level="14" data-path="errata.html">
+        <li class="chapter " data-level="14" data-path="exercise/ex.html">
+            
+                
+                    <a href="../exercise/ex.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                        习题解答
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="14.1" data-path="exercise/ex-ch1.html">
+            
+                
+                    <a href="../exercise/ex-ch1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.1.</b>
+                        
+                        第一章 入门
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="errata.html">
             
                 
                     <a href="../errata.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>14.</b>
+                            <b>15.</b>
                         
                         勘误
                     </a>
@@ -2059,9 +2095,10 @@ fmt.Println(p) <span class="hljs-comment">// &quot;{2, 4}&quot;</span>
 <pre><code class="lang-go">Point{<span class="hljs-number">1</span>, <span class="hljs-number">2</span>}.ScaleBy(<span class="hljs-number">2</span>) <span class="hljs-comment">// compile error: can&apos;t take address of Point literal</span>
 </code></pre>
 <p>&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;&#x4E00;&#x4E2A;<code>*Point</code>&#x8FD9;&#x6837;&#x7684;&#x63A5;&#x6536;&#x5668;&#x6765;&#x8C03;&#x7528;Point&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5730;&#x5740;&#x6765;&#x627E;&#x5230;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x53EA;&#x8981;&#x7528;&#x89E3;&#x5F15;&#x7528;&#x7B26;&#x53F7;<code>*</code>&#x6765;&#x53D6;&#x5230;&#x8BE5;&#x53D8;&#x91CF;&#x5373;&#x53EF;&#x3002;&#x7F16;&#x8BD1;&#x5668;&#x5728;&#x8FD9;&#x91CC;&#x4E5F;&#x4F1A;&#x7ED9;&#x6211;&#x4EEC;&#x9690;&#x5F0F;&#x5730;&#x63D2;&#x5165;<code>*</code>&#x8FD9;&#x4E2A;&#x64CD;&#x4F5C;&#x7B26;&#xFF0C;&#x6240;&#x4EE5;&#x4E0B;&#x9762;&#x8FD9;&#x4E24;&#x79CD;&#x5199;&#x6CD5;&#x7B49;&#x4EF7;&#x7684;&#xFF1A;</p>
-<pre><code>pptr.Distance(q)
+<pre><code class="lang-Go">pptr.Distance(q)
 (*pptr).Distance(q)
-</code></pre><p>Let&#x2019;s summarize these three cases again, since they are a frequent point of confusion. In every valid method call expression, exactly one of these three statements is true.
+</code></pre>
+<p>Let&#x2019;s summarize these three cases again, since they are a frequent point of confusion. In every valid method call expression, exactly one of these three statements is true.
 &#x8FD9;&#x91CC;&#x7684;&#x51E0;&#x4E2A;&#x4F8B;&#x5B50;&#x53EF;&#x80FD;&#x8BA9;&#x4F60;&#x6709;&#x4E9B;&#x56F0;&#x60D1;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#xFF1A;&#x5728;&#x6BCF;&#x4E00;&#x4E2A;&#x5408;&#x6CD5;&#x7684;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4E0B;&#x9762;&#x4E09;&#x79CD;&#x60C5;&#x51B5;&#x91CC;&#x7684;&#x4EFB;&#x610F;&#x4E00;&#x79CD;&#x60C5;&#x51B5;&#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x7684;&#xFF1A;</p>
 <p>&#x4E0D;&#x8BBA;&#x662F;&#x63A5;&#x6536;&#x5668;&#x7684;&#x5B9E;&#x9645;&#x53C2;&#x6570;&#x548C;&#x5176;&#x63A5;&#x6536;&#x5668;&#x7684;&#x5F62;&#x5F0F;&#x53C2;&#x6570;&#x76F8;&#x540C;&#xFF0C;&#x6BD4;&#x5982;&#x4E24;&#x8005;&#x90FD;&#x662F;&#x7C7B;&#x578B;T&#x6216;&#x8005;&#x90FD;&#x662F;&#x7C7B;&#x578B;<code>*T</code>&#xFF1A;</p>
 <pre><code class="lang-go">Point{<span class="hljs-number">1</span>, <span class="hljs-number">2</span>}.Distance(q) <span class="hljs-comment">//  Point</span>

@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="13.4" data-chapter-title="通过cgo调用C代码" data-filepath="ch13/ch13-04.md" data-basepath=".." data-revision="Fri Dec 04 2015 10:23:24 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="13.4" data-chapter-title="通过cgo调用C代码" data-filepath="ch13/ch13-04.md" data-basepath=".." data-revision="Mon Dec 07 2015 11:23:53 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -1975,14 +1975,50 @@
             
         </li>
     
-        <li class="chapter " data-level="14" data-path="errata.html">
+        <li class="chapter " data-level="14" data-path="exercise/ex.html">
+            
+                
+                    <a href="../exercise/ex.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                        习题解答
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="14.1" data-path="exercise/ex-ch1.html">
+            
+                
+                    <a href="../exercise/ex-ch1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.1.</b>
+                        
+                        第一章 入门
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="errata.html">
             
                 
                     <a href="../errata.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>14.</b>
+                            <b>15.</b>
                         
                         勘误
                     </a>
@@ -2037,19 +2073,19 @@
 &#x7136;&#x540E;&#x6709;&#x4E09;&#x4E2A;&#x51FD;&#x6570;: BZ2_bzCompressInit &#x7528;&#x4E8E;&#x521D;&#x59CB;&#x5316;&#x7F13;&#x5B58;, BZ2_bzCompress &#x7528;&#x4E8E;&#x5C06;&#x8F93;&#x5165;&#x7F13;&#x5B58;&#x7684;&#x6570;&#x636E;&#x538B;&#x7F29;&#x5230;&#x8F93;&#x51FA;&#x7F13;&#x5B58;, BZ2_bzCompressEnd &#x7528;&#x4E8E;&#x91CA;&#x653E;&#x4E0D;&#x9700;&#x8981;&#x7684;&#x7F13;&#x5B58;.
 (&#x76EE;&#x524D;&#x4E0D;&#x8981;&#x62C5;&#x5FC3;&#x5305;&#x7684;&#x5177;&#x4F53;&#x7ED3;&#x6784;, &#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x7684;&#x76EE;&#x7684;&#x5C31;&#x662F;&#x6F14;&#x793A;&#x5404;&#x4E2A;&#x90E8;&#x5206;&#x5982;&#x4F55;&#x7EC4;&#x5408;&#x5728;&#x4E00;&#x8D77;&#x7684;)</p>
 <p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;Go&#x4EE3;&#x7801;&#x4E2D;&#x76F4;&#x63A5;&#x8C03;&#x7528; BZ2_bzCompressInit &#x548C; BZ2_bzCompressEnd, &#x4F46;&#x662F;&#x5BF9;&#x4E8E; BZ2_bzCompress, &#x6211;&#x4EEC;&#x5C06;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;C&#x8BED;&#x8A00;&#x7684;&#x5305;&#x88C5;&#x51FD;&#x6570;, &#x4E3A;&#x4E86;&#x663E;&#x793A;&#x4ED6;&#x662F;&#x5982;&#x4F55;&#x5B8C;&#x6210;&#x7684;. &#x4E0B;&#x9762;&#x662F;C&#x4EE3;&#x7801;, &#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x6587;&#x4EF6;.</p>
-<pre><code class="lang-Go">gopl.io/ch13/bzip
+<pre><code class="lang-C">gopl.io/ch13/bzip
 
 <span class="hljs-comment">/* This file is gopl.io/ch13/bzip/bzip2.c,         */</span>
 <span class="hljs-comment">/* a simple wrapper for libbzip2 suitable for cgo. */</span>
-#include &lt;bzlib.h&gt;
+<span class="hljs-preprocessor">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bzlib.h&gt;</span></span>
 
-<span class="hljs-typename">int</span> bz2compress(bz_stream *s, <span class="hljs-typename">int</span> action,
-                char *in, unsigned *inlen, char *out, unsigned *outlen) {
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">bz2compress</span><span class="hljs-params">(bz_stream *s, <span class="hljs-keyword">int</span> action,
+                <span class="hljs-keyword">char</span> *in, <span class="hljs-keyword">unsigned</span> *inlen, <span class="hljs-keyword">char</span> *out, <span class="hljs-keyword">unsigned</span> *outlen)</span> </span>{
     s-&gt;next_in = in;
     s-&gt;avail_in = *inlen;
     s-&gt;next_out = out;
     s-&gt;avail_out = *outlen;
-    <span class="hljs-typename">int</span> r = BZ2_bzCompress(s, action);
+    <span class="hljs-keyword">int</span> r = BZ2_bzCompress(s, action);
     *inlen -= s-&gt;avail_in;
     *outlen -= s-&gt;avail_out;
     <span class="hljs-keyword">return</span> r;

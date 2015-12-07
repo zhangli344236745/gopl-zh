@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="2.4" data-chapter-title="赋值" data-filepath="ch2/ch2-04.md" data-basepath=".." data-revision="Fri Dec 04 2015 10:23:24 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="2.4" data-chapter-title="赋值" data-filepath="ch2/ch2-04.md" data-basepath=".." data-revision="Mon Dec 07 2015 11:23:53 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -1975,14 +1975,50 @@
             
         </li>
     
-        <li class="chapter " data-level="14" data-path="errata.html">
+        <li class="chapter " data-level="14" data-path="exercise/ex.html">
+            
+                
+                    <a href="../exercise/ex.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                        习题解答
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="14.1" data-path="exercise/ex-ch1.html">
+            
+                
+                    <a href="../exercise/ex-ch1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.1.</b>
+                        
+                        第一章 入门
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="errata.html">
             
                 
                     <a href="../errata.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>14.</b>
+                            <b>15.</b>
                         
                         勘误
                     </a>
@@ -2033,9 +2069,7 @@ count[x] = count[x] * scale <span class="hljs-comment">// &#x6570;&#x7EC4;, &#x5
 <p>&#x7279;&#x5B9A;&#x7684;&#x8D4B;&#x503C;&#x8BED;&#x53E5;&#x548C;&#x4E8C;&#x5143;&#x7B97;&#x672F;&#x590D;&#x5408;&#x64CD;&#x4F5C;&#x6709;&#x4E00;&#x4E2A;&#x7B80;&#x6D01;&#x5F62;&#x5F0F;, &#x4F8B;&#x5982;&#x4E0A;&#x9762;&#x6700;&#x540E;&#x7684;&#x8BED;&#x53E5;&#x53EF;&#x4EE5;&#x91CD;&#x5199;&#x4E3A;:</p>
 <pre><code class="lang-Go">count[x] *= scale
 </code></pre>
-<p>which saves us from having to repeat (and re-evaluate) the expression for the variable. </p>
 <p>&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x7701;&#x53BB;&#x5BF9;&#x53D8;&#x91CF;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x91CD;&#x590D;&#x8BA1;&#x7B97;.</p>
-<p>Numeric variables can also be incremented and decremented by ++ and -- statements: </p>
 <p>&#x6570;&#x503C;&#x53D8;&#x91CF;&#x4E5F;&#x53EF;&#x4EE5;&#x652F;&#x6301; <code>++</code> &#x9012;&#x589E;&#x548C; <code>--</code> &#x9012;&#x51CF;&#x8BED;&#x53E5;:</p>
 <pre><code class="lang-Go">v := <span class="hljs-number">1</span> 
 v++    <span class="hljs-comment">// &#x7B49;&#x4EF7;&#x65B9;&#x5F0F; v = v + 1; v &#x53D8;&#x6210; 2 </span>
@@ -2077,7 +2111,6 @@ a[i], a[j] = a[j], a[i]
 v, ok = x.(T)              <span class="hljs-comment">// type assertion</span>
 v, ok = &lt;-ch               <span class="hljs-comment">// channel receive</span>
 </code></pre>
-<p>As with variable declarations, we can assign unwanted values to the blank identi&#xFB01;er:</p>
 <p>&#x548C;&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;&#x4E00;&#x6837;, &#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;&#x4E0B;&#x5212;&#x7EBF;&#x7A7A;&#x767D;&#x6807;&#x8BC6;&#x7B26; <code>_</code> &#x6765;&#x4E22;&#x5F03;&#x4E0D;&#x9700;&#x8981;&#x7684;&#x503C;.</p>
 <pre><code class="lang-Go">_, err = io.Copy(dst, src) <span class="hljs-comment">// &#x4E22;&#x5F03;&#x5B57;&#x8282;&#x6570;</span>
 _, ok = x.(T)              <span class="hljs-comment">// &#x53EA;&#x68C0;&#x6D4B;&#x7C7B;&#x578B;, &#x5FFD;&#x7565;&#x5177;&#x4F53;&#x503C;</span>

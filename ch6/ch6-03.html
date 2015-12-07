@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="6.3" data-chapter-title="通过嵌入结构体来扩展类型" data-filepath="ch6/ch6-03.md" data-basepath=".." data-revision="Fri Dec 04 2015 10:23:24 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="6.3" data-chapter-title="通过嵌入结构体来扩展类型" data-filepath="ch6/ch6-03.md" data-basepath=".." data-revision="Mon Dec 07 2015 11:23:53 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -1975,14 +1975,50 @@
             
         </li>
     
-        <li class="chapter " data-level="14" data-path="errata.html">
+        <li class="chapter " data-level="14" data-path="exercise/ex.html">
+            
+                
+                    <a href="../exercise/ex.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                        习题解答
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="14.1" data-path="exercise/ex-ch1.html">
+            
+                
+                    <a href="../exercise/ex-ch1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.1.</b>
+                        
+                        第一章 入门
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="errata.html">
             
                 
                     <a href="../errata.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>14.</b>
+                            <b>15.</b>
                         
                         勘误
                     </a>
@@ -2024,7 +2060,97 @@
                     <section class="normal" id="section-">
                     
                         <h2 id="63-&#x901A;&#x8FC7;&#x5D4C;&#x5165;&#x7ED3;&#x6784;&#x4F53;&#x6765;&#x6269;&#x5C55;&#x7C7B;&#x578B;">6.3. &#x901A;&#x8FC7;&#x5D4C;&#x5165;&#x7ED3;&#x6784;&#x4F53;&#x6765;&#x6269;&#x5C55;&#x7C7B;&#x578B;</h2>
-<p>TODO</p>
+<p>&#x6765;&#x770B;&#x770B;ColoredPoint&#x8FD9;&#x4E2A;&#x7C7B;&#x578B;&#xFF1A;</p>
+<pre><code class="lang-go">gopl.io/ch6/coloredpoint
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;image/color&quot;</span>
+<span class="hljs-keyword">type</span> Point <span class="hljs-keyword">struct</span>{ X, Y <span class="hljs-typename">float64</span> }
+<span class="hljs-keyword">type</span> ColoredPoint <span class="hljs-keyword">struct</span> {
+    Point
+    Color color.RGBA
+}
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x5C06;ColoredPoint&#x5B9A;&#x4E49;&#x4E3A;&#x4E00;&#x4E2A;&#x6709;&#x4E09;&#x4E2A;&#x5B57;&#x6BB5;&#x7684;struct&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x5374;&#x5C06;Point&#x8FD9;&#x4E2A;&#x7C7B;&#x578B;&#x5D4C;&#x5165;&#x5230;ColoredPoint&#x6765;&#x63D0;&#x4F9B;X&#x548C;Y&#x8FD9;&#x4E24;&#x4E2A;&#x5B57;&#x6BB5;&#x3002;&#x50CF;&#x6211;&#x4EEC;&#x5728;4.4&#x8282;&#x4E2D;&#x770B;&#x5230;&#x7684;&#x90A3;&#x6837;&#xFF0C;&#x5185;&#x5D4C;&#x53EF;&#x4EE5;&#x4F7F;&#x6211;&#x4EEC;&#x5728;&#x5B9A;&#x4E49;ColoredPoint&#x65F6;&#x5F97;&#x5230;&#x4E00;&#x79CD;&#x53E5;&#x6CD5;&#x4E0A;&#x7684;&#x7B80;&#x5199;&#x5F62;&#x5F0F;&#xFF0C;&#x5E76;&#x4F7F;&#x5176;&#x5305;&#x542B;Point&#x7C7B;&#x578B;&#x6240;&#x5177;&#x6709;&#x7684;&#x4E00;&#x5207;&#x5B57;&#x6BB5;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5B9A;&#x4E49;&#x4E00;&#x4E9B;&#x81EA;&#x5DF1;&#x7684;&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x8BDD;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8BA4;&#x4E3A;&#x901A;&#x8FC7;&#x5D4C;&#x5165;&#x7684;&#x5B57;&#x6BB5;&#x5C31;&#x662F;ColoredPoint&#x81EA;&#x8EAB;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x800C;&#x5B8C;&#x5168;&#x4E0D;&#x9700;&#x8981;&#x5728;&#x8C03;&#x7528;&#x65F6;&#x6307;&#x51FA;Point&#xFF0C;&#x6BD4;&#x5982;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">var</span> cp ColoredPoint
+cp.X = <span class="hljs-number">1</span>
+fmt.Println(cp.Point.X) <span class="hljs-comment">// &quot;1&quot;</span>
+cp.Point.Y = <span class="hljs-number">2</span>
+fmt.Println(cp.Y) <span class="hljs-comment">// &quot;2&quot;</span>
+</code></pre>
+<p>&#x5BF9;&#x4E8E;Point&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x6211;&#x4EEC;&#x4E5F;&#x6709;&#x7C7B;&#x4F3C;&#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x628A;ColoredPoint&#x7C7B;&#x578B;&#x5F53;&#x4F5C;&#x63A5;&#x6536;&#x5668;&#x6765;&#x8C03;&#x7528;Point&#x91CC;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5373;&#x4F7F;ColoredPoint&#x91CC;&#x6CA1;&#x6709;&#x58F0;&#x660E;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-go">red := color.RGBA{<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">255</span>}
+blue := color.RGBA{<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>}
+<span class="hljs-keyword">var</span> p = ColoredPoint{Point{<span class="hljs-number">1</span>, <span class="hljs-number">1</span>}, red}
+<span class="hljs-keyword">var</span> q = ColoredPoint{Point{<span class="hljs-number">5</span>, <span class="hljs-number">4</span>}, blue}
+fmt.Println(p.Distance(q.Point)) <span class="hljs-comment">// &quot;5&quot;</span>
+p.ScaleBy(<span class="hljs-number">2</span>)
+q.ScaleBy(<span class="hljs-number">2</span>)
+fmt.Println(p.Distance(q.Point)) <span class="hljs-comment">// &quot;10&quot;</span>
+</code></pre>
+<p>Point&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#x4E5F;&#x88AB;&#x5F15;&#x5165;&#x4E86;ColoredPoint&#x3002;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x5185;&#x5D4C;&#x53EF;&#x4EE5;&#x4F7F;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x5B57;&#x6BB5;&#x7279;&#x522B;&#x591A;&#x7684;&#x590D;&#x6742;&#x7C7B;&#x578B;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x5B57;&#x6BB5;&#x5148;&#x6309;&#x5C0F;&#x7C7B;&#x578B;&#x5206;&#x7EC4;&#xFF0C;&#x7136;&#x540E;&#x5B9A;&#x4E49;&#x5C0F;&#x7C7B;&#x578B;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4E4B;&#x540E;&#x518D;&#x628A;&#x5B83;&#x4EEC;&#x7EC4;&#x5408;&#x8D77;&#x6765;&#x3002;</p>
+<p>&#x8BFB;&#x8005;&#x5982;&#x679C;&#x5BF9;&#x57FA;&#x4E8E;&#x7C7B;&#x6765;&#x5B9E;&#x73B0;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x8BED;&#x8A00;&#x6BD4;&#x8F83;&#x719F;&#x6089;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x503E;&#x5411;&#x4E8E;&#x5C06;Point&#x770B;&#x4F5C;&#x4E00;&#x4E2A;&#x57FA;&#x7C7B;&#xFF0C;&#x800C;ColoredPoint&#x770B;&#x4F5C;&#x5176;&#x5B50;&#x7C7B;&#x6216;&#x8005;&#x7EE7;&#x627F;&#x7C7B;&#xFF0C;&#x6216;&#x8005;&#x5C06;ColoredPoint&#x770B;&#x4F5C;&quot;is a&quot; Point&#x7C7B;&#x578B;&#x3002;&#x4F46;&#x8FD9;&#x662F;&#x9519;&#x8BEF;&#x7684;&#x7406;&#x89E3;&#x3002;&#x8BF7;&#x6CE8;&#x610F;&#x4E0A;&#x9762;&#x4F8B;&#x5B50;&#x4E2D;&#x5BF9;Distance&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x3002;Distance&#x6709;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;Point&#x7C7B;&#x578B;&#xFF0C;&#x4F46;q&#x5E76;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;Point&#x7C7B;&#xFF0C;&#x6240;&#x4EE5;&#x5C3D;&#x7BA1;q&#x6709;&#x7740;Point&#x8FD9;&#x4E2A;&#x5185;&#x5D4C;&#x7C7B;&#x578B;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x5FC5;&#x987B;&#x8981;&#x663E;&#x5F0F;&#x5730;&#x9009;&#x62E9;&#x5B83;&#x3002;&#x5C1D;&#x8BD5;&#x76F4;&#x63A5;&#x4F20;q&#x7684;&#x8BDD;&#x4F60;&#x4F1A;&#x770B;&#x5230;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#x7684;&#x9519;&#x8BEF;&#xFF1A;</p>
+<pre><code class="lang-go">p.Distance(q) <span class="hljs-comment">// compile error: cannot use q (ColoredPoint) as Point</span>
+</code></pre>
+<p>&#x4E00;&#x4E2A;ColoredPoint&#x5E76;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;Point&#xFF0C;&#x4F46;&#x4ED6;&quot;has a&quot;Point&#xFF0C;&#x5E76;&#x4E14;&#x5B83;&#x6709;&#x4ECE;Point&#x7C7B;&#x91CC;&#x5F15;&#x5165;&#x7684;Distance&#x548C;ScaleBy&#x65B9;&#x6CD5;&#x3002;&#x5982;&#x679C;&#x4F60;&#x559C;&#x6B22;&#x4ECE;&#x5B9E;&#x73B0;&#x7684;&#x89D2;&#x5EA6;&#x6765;&#x8003;&#x8651;&#x95EE;&#x9898;&#xFF0C;&#x5185;&#x5D4C;&#x5B57;&#x6BB5;&#x4F1A;&#x6307;&#x5BFC;&#x7F16;&#x8BD1;&#x5668;&#x53BB;&#x751F;&#x6210;&#x989D;&#x5916;&#x7684;&#x5305;&#x88C5;&#x65B9;&#x6CD5;&#x6765;&#x59D4;&#x6258;&#x5DF2;&#x7ECF;&#x58F0;&#x660E;&#x597D;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x548C;&#x4E0B;&#x9762;&#x7684;&#x5F62;&#x5F0F;&#x662F;&#x7B49;&#x4EF7;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> (p ColoredPoint) Distance(q Point) <span class="hljs-typename">float64</span> {
+    <span class="hljs-keyword">return</span> p.Point.Distance(q)
+}
+
+<span class="hljs-keyword">func</span> (p *ColoredPoint) ScaleBy(factor <span class="hljs-typename">float64</span>) {
+    p.Point.ScaleBy(factor)
+}
+</code></pre>
+<p>&#x5F53;Point.Distance&#x88AB;&#x7B2C;&#x4E00;&#x4E2A;&#x5305;&#x88C5;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x5B83;&#x7684;&#x63A5;&#x6536;&#x5668;&#x503C;&#x662F;p.Point&#xFF0C;&#x800C;&#x4E0D;&#x662F;p&#xFF0C;&#x5F53;&#x7136;&#x4E86;&#xFF0C;&#x5728;Point&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#x91CC;&#xFF0C;&#x4F60;&#x662F;&#x8BBF;&#x95EE;&#x4E0D;&#x5230;ColoredPoint&#x7684;&#x4EFB;&#x4F55;&#x5B57;&#x6BB5;&#x7684;&#x3002;</p>
+<p>&#x5728;&#x7C7B;&#x578B;&#x4E2D;&#x5185;&#x5D4C;&#x7684;&#x533F;&#x540D;&#x5B57;&#x6BB5;&#x4E5F;&#x53EF;&#x80FD;&#x662F;&#x4E00;&#x4E2A;&#x547D;&#x540D;&#x7C7B;&#x578B;&#x7684;&#x6307;&#x9488;&#xFF0C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x5B57;&#x6BB5;&#x548C;&#x65B9;&#x6CD5;&#x4F1A;&#x88AB;&#x95F4;&#x63A5;&#x5730;&#x5F15;&#x5165;&#x5230;&#x5F53;&#x524D;&#x7684;&#x7C7B;&#x578B;&#x4E2D;(&#x8BD1;&#x6CE8;&#xFF1A;&#x8BBF;&#x95EE;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x8BE5;&#x6307;&#x9488;&#x6307;&#x5411;&#x7684;&#x5BF9;&#x8C61;&#x53BB;&#x53D6;)&#x3002;&#x6DFB;&#x52A0;&#x8FD9;&#x4E00;&#x5C42;&#x95F4;&#x63A5;&#x5173;&#x7CFB;&#x8BA9;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5171;&#x4EAB;&#x901A;&#x7528;&#x7684;&#x7ED3;&#x6784;&#x5E76;&#x52A8;&#x6001;&#x5730;&#x6539;&#x53D8;&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#x3002;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;ColoredPoint&#x7684;&#x58F0;&#x660E;&#x5185;&#x5D4C;&#x4E86;&#x4E00;&#x4E2A;*Point&#x7684;&#x6307;&#x9488;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">type</span> ColoredPoint <span class="hljs-keyword">struct</span> {
+    *Point
+    Color color.RGBA
+}
+
+p := ColoredPoint{&amp;Point{<span class="hljs-number">1</span>, <span class="hljs-number">1</span>}, red}
+q := ColoredPoint{&amp;Point{<span class="hljs-number">5</span>, <span class="hljs-number">4</span>}, blue}
+fmt.Println(p.Distance(*q.Point)) <span class="hljs-comment">// &quot;5&quot;</span>
+q.Point = p.Point                 <span class="hljs-comment">// p and q now share the same Point</span>
+p.ScaleBy(<span class="hljs-number">2</span>)
+fmt.Println(*p.Point, *q.Point) <span class="hljs-comment">// &quot;{2 2} {2 2}&quot;</span>
+</code></pre>
+<p>&#x4E00;&#x4E2A;struct&#x7C7B;&#x578B;&#x4E5F;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x591A;&#x4E2A;&#x533F;&#x540D;&#x5B57;&#x6BB5;&#x3002;&#x6211;&#x4EEC;&#x5C06;ColoredPoint&#x5B9A;&#x4E49;&#x4E3A;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">type</span> ColoredPoint <span class="hljs-keyword">struct</span> {
+    Point
+    color.RGBA
+}
+</code></pre>
+<p>&#x7136;&#x540E;&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x4FBF;&#x4F1A;&#x62E5;&#x6709;Point&#x548C;RGBA&#x7C7B;&#x578B;&#x7684;&#x6240;&#x6709;&#x65B9;&#x6CD5;&#xFF0C;&#x4EE5;&#x53CA;&#x76F4;&#x63A5;&#x5B9A;&#x4E49;&#x5728;ColoredPoint&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x5F53;&#x7F16;&#x8BD1;&#x5668;&#x89E3;&#x6790;&#x4E00;&#x4E2A;&#x9009;&#x62E9;&#x5668;&#x5230;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x6BD4;&#x5982;p.ScaleBy&#xFF0C;&#x5B83;&#x4F1A;&#x9996;&#x5148;&#x53BB;&#x627E;&#x76F4;&#x63A5;&#x5B9A;&#x4E49;&#x5728;&#x8FD9;&#x4E2A;&#x7C7B;&#x578B;&#x91CC;&#x7684;ScaleBy&#x65B9;&#x6CD5;&#xFF0C;&#x7136;&#x540E;&#x627E;&#x88AB;ColoredPoint&#x7684;&#x5185;&#x5D4C;&#x5B57;&#x6BB5;&#x4EEC;&#x5F15;&#x5165;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x7136;&#x540E;&#x53BB;&#x627E;Point&#x548C;RGBA&#x7684;&#x5185;&#x5D4C;&#x5B57;&#x6BB5;&#x5F15;&#x5165;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x7136;&#x540E;&#x4E00;&#x76F4;&#x9012;&#x5F52;&#x5411;&#x4E0B;&#x627E;&#x3002;&#x5982;&#x679C;&#x9009;&#x62E9;&#x5668;&#x6709;&#x4E8C;&#x4E49;&#x6027;&#x7684;&#x8BDD;&#x7F16;&#x8BD1;&#x5668;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x6BD4;&#x5982;&#x4F60;&#x5728;&#x540C;&#x4E00;&#x7EA7;&#x91CC;&#x6709;&#x4E24;&#x4E2A;&#x540C;&#x540D;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x65B9;&#x6CD5;&#x53EA;&#x80FD;&#x5728;&#x547D;&#x540D;&#x7C7B;&#x578B;(&#x50CF;Point)&#x6216;&#x8005;&#x6307;&#x5411;&#x7C7B;&#x578B;&#x7684;&#x6307;&#x9488;&#x4E0A;&#x5B9A;&#x4E49;&#xFF0C;&#x4F46;&#x662F;&#x591A;&#x4E8F;&#x4E86;&#x5185;&#x5D4C;&#xFF0C;&#x6709;&#x4E9B;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x7ED9;&#x533F;&#x540D;struct&#x7C7B;&#x578B;&#x6765;&#x5B9A;&#x4E49;&#x65B9;&#x6CD5;&#x4E5F;&#x6709;&#x4E86;&#x624B;&#x6BB5;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x5C0F;trick&#x3002;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x5C55;&#x793A;&#x4E86;&#x7B80;&#x5355;&#x7684;cache&#xFF0C;&#x5176;&#x4F7F;&#x7528;&#x4E24;&#x4E2A;&#x5305;&#x7EA7;&#x522B;&#x7684;&#x53D8;&#x91CF;&#x6765;&#x5B9E;&#x73B0;&#xFF0C;&#x4E00;&#x4E2A;mutex&#x4E92;&#x65A5;&#x91CF;(&#xA7;9.2)&#x548C;&#x5B83;&#x6240;&#x64CD;&#x4F5C;&#x7684;cache&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">var</span> (
+    mu sync.Mutex <span class="hljs-comment">// guards mapping</span>
+    mapping = <span class="hljs-built_in">make</span>(<span class="hljs-keyword">map</span>[<span class="hljs-typename">string</span>]<span class="hljs-typename">string</span>)
+)
+
+<span class="hljs-keyword">func</span> Lookup(key <span class="hljs-typename">string</span>) <span class="hljs-typename">string</span> {
+    mu.Lock()
+    v := mapping[key]
+    mu.Unlock()
+    <span class="hljs-keyword">return</span> v
+}
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x7248;&#x672C;&#x5728;&#x529F;&#x80FD;&#x4E0A;&#x662F;&#x4E00;&#x81F4;&#x7684;&#xFF0C;&#x4F46;&#x5C06;&#x4E24;&#x4E2A;&#x5305;&#x7EA7;&#x5427;&#x7684;&#x53D8;&#x91CF;&#x653E;&#x5728;&#x4E86;cache&#x8FD9;&#x4E2A;struct&#x4E00;&#x7EC4;&#x5185;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">var</span> cache = <span class="hljs-keyword">struct</span> {
+    sync.Mutex
+    mapping <span class="hljs-keyword">map</span>[<span class="hljs-typename">string</span>]<span class="hljs-typename">string</span>
+}{
+    mapping: <span class="hljs-built_in">make</span>(<span class="hljs-keyword">map</span>[<span class="hljs-typename">string</span>]<span class="hljs-typename">string</span>),
+}
+
+
+<span class="hljs-keyword">func</span> Lookup(key <span class="hljs-typename">string</span>) <span class="hljs-typename">string</span> {
+    cache.Lock()
+    v := cache.mapping[key]
+    cache.Unlock()
+    <span class="hljs-keyword">return</span> v
+}
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x7ED9;&#x65B0;&#x7684;&#x53D8;&#x91CF;&#x8D77;&#x4E86;&#x4E00;&#x4E2A;&#x66F4;&#x5177;&#x8868;&#x8FBE;&#x6027;&#x7684;&#x540D;&#x5B57;&#xFF1A;cache&#x3002;&#x56E0;&#x4E3A;sync.Mutex&#x5B57;&#x6BB5;&#x4E5F;&#x88AB;&#x5D4C;&#x5165;&#x5230;&#x4E86;&#x8FD9;&#x4E2A;struct&#x91CC;&#xFF0C;&#x5176;Lock&#x548C;Unlock&#x65B9;&#x6CD5;&#x4E5F;&#x5C31;&#x90FD;&#x88AB;&#x5F15;&#x5165;&#x5230;&#x4E86;&#x8FD9;&#x4E2A;&#x533F;&#x540D;&#x7ED3;&#x6784;&#x4E2D;&#x4E86;&#xFF0C;&#x8FD9;&#x8BA9;&#x6211;&#x4EEC;&#x80FD;&#x591F;&#x4EE5;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x660E;&#x4E86;&#x7684;&#x8BED;&#x6CD5;&#x6765;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x52A0;&#x9501;&#x89E3;&#x9501;&#x64CD;&#x4F5C;&#x3002;</p>
 
                     
                     </section>
