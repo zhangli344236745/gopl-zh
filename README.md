@@ -5,7 +5,7 @@
 http://gopl.io/
 
 
-## 中文读书笔记预览
+## 《Go圣经读书笔记》预览
 
 http://golang-china.github.com/gopl-zh
 
