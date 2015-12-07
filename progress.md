@@ -93,7 +93,7 @@
  - [x] 10.4 Import Declarations
  - [x] 10.5 Blank Imports
  - [x] 10.6 Packages and Naming
- - [ ] 10.7 The Go Tool
+ - [x] 10.7 The Go Tool
 - [ ] Chapter 11: Testing
  - [ ] 11.1 The go test Tool
  - [ ] 11.2 Test Functions
