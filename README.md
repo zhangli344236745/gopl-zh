@@ -23,6 +23,8 @@ http://golang-china.github.com/gopl-zh
 
 ## 授权方式
 
-授权方式 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.<br/>
+严禁任何商业行为使用或引用该 **读书笔记** 的全部或部分内容!
+
+授权方式: <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.<br/>
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="./images/by-nc-sa-4.0-88x31.png"/></a>
 

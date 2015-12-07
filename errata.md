@@ -1,4 +1,4 @@
-# Errata
+# 附录B: 勘误
 
 **p.9, ¶2:** for "can compared", read "can be compared".
     (Thanks to Antonio Macías Ojeda, 2015-10-22.)

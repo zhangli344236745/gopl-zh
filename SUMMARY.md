@@ -122,5 +122,7 @@
   * [示例: 深度相等判断](ch13/ch13-03.md)
   * [通过cgo调用C代码](ch13/ch13-04.md)
   * [几点忠告](ch13/ch13-05.md)
+* [习题解答](exercise/ex.md)
+  * [第一章 入门](exercise/ex-ch1.md)
 * [勘误](errata.md)
 
